@@ -1,0 +1,241 @@
+/*
+ * tooltip
+ */ 
+
+/**
+ * Tooltip Styles
+ */
+
+/* Base styles for the element that has a tooltip */
+[data-tooltip],
+.in-c-tooltip {
+
+  position: relative;
+  cursor: pointer;
+
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after,
+.in-c-tooltip:before,
+.in-c-tooltip:after {
+
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+	transition:         
+		opacity 0.2s ease-in-out,
+		visibility 0.2s ease-in-out,
+		transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  transform: translate3d(0, 0, 0);
+  pointer-events: none;
+
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.in-c-tooltip:hover:before,
+.in-c-tooltip:hover:after,
+.in-c-tooltip:focus:before,
+.in-c-tooltip:focus:after {
+
+  visibility: visible;
+  opacity: 1;
+
+}
+
+/* directional arrow */
+
+.in-c-tooltip:before,
+[data-tooltip]:before {
+
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+
+}
+
+/* content area */
+
+.in-c-tooltip:after,
+[data-tooltip]:after {
+
+  z-index: 1000;
+  padding: 8px;
+  width: 240px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 14px;
+  line-height: 1.2;
+  border-radius: 2px;
+  text-align: left;
+
+}
+
+/* directions */
+
+/* top (default) */
+
+[data-tooltip]:before,
+[data-tooltip]:after,
+.in-c-tooltip:before,
+.in-c-tooltip:after,
+.in-c-tooltip-top:before,
+.in-c-tooltip-top:after {
+
+  bottom: 100%;
+  left: 50%;
+
+}
+
+[data-tooltip]:before,
+.in-c-tooltip:before,
+.in-c-tooltip-top:before {
+
+  margin-left: -6px;
+  margin-bottom: -12px;
+  border-top-color: #000;
+  border-top-color: hsla(0, 0%, 20%, 0.9);
+
+}
+
+/* horizontally align top/bottom tooltips */
+
+[data-tooltip]:after,
+.in-c-tooltip:after,
+.in-c-tooltip-top:after {
+
+  margin-left: -80px;
+
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.in-c-tooltip:hover:before,
+.in-c-tooltip:hover:after,
+.in-c-tooltip:focus:before,
+.in-c-tooltip:focus:after,
+.in-c-tooltip-top:hover:before,
+.in-c-tooltip-top:hover:after,
+.in-c-tooltip-top:focus:before,
+.in-c-tooltip-top:focus:after {
+
+  transform:         translateY(-12px); 
+
+}
+
+/* left */
+
+.in-c-tooltip-left:before,
+.in-c-tooltip-left:after {
+
+  right: 100%;
+  bottom: 50%;
+  left: auto;
+
+}
+
+.in-c-tooltip-left:before {
+
+  margin-left: 0;
+  margin-right: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-left-color: #000;
+  border-left-color: hsla(0, 0%, 20%, 0.9);
+
+}
+
+.in-c-tooltip-left:hover:before,
+.in-c-tooltip-left:hover:after,
+.in-c-tooltip-left:focus:before,
+.in-c-tooltip-left:focus:after {
+
+  transform: translateX(-12px); 
+
+}
+
+/* bottom */
+
+.in-c-tooltip-bottom:before,
+.in-c-tooltip-bottom:after {
+
+  top: 100%;
+  bottom: auto;
+  left: 50%;
+
+}
+
+.in-c-tooltip-bottom:before {
+
+  margin-top: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-bottom-color: #000;
+  border-bottom-color: hsla(0, 0%, 20%, 0.9);
+
+}
+
+.in-c-tooltip-bottom:hover:before,
+.in-c-tooltip-bottom:hover:after,
+.in-c-tooltip-bottom:focus:before,
+.in-c-tooltip-bottom:focus:after {
+
+  transform: translateY(12px); 
+
+}
+
+/* right */
+
+.in-c-tooltip-right:before,
+.in-c-tooltip-right:after {
+
+  bottom: 50%;
+  left: 100%;
+
+}
+
+.in-c-tooltip-right:before {
+
+  margin-bottom: 0;
+  margin-left: -12px;
+  border-top-color: transparent;
+  border-right-color: #000;
+  border-right-color: hsla(0, 0%, 20%, 0.9);
+
+}
+
+.in-c-tooltip-right:hover:before,
+.in-c-tooltip-right:hover:after,
+.in-c-tooltip-right:focus:before,
+.in-c-tooltip-right:focus:after {
+
+  transform: translateX(12px); 
+
+}
+
+/* move directional arrows down a bit for left/right tooltips */
+
+.in-c-tooltip-left:before,
+.in-c-tooltip-right:before {
+
+  top: 3px;
+
+}
+
+/* vertically center tooltip content for left/right tooltips */
+
+.in-c-tooltip-left:after,
+.in-c-tooltip-right:after {
+
+  margin-left: 0;
+  margin-bottom: -16px;
+
+}

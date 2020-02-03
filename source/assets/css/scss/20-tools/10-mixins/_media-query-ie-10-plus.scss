@@ -1,0 +1,22 @@
+//
+// Target IE 10+
+//
+// http://philipnewcomer.net/2014/04/target-internet-explorer-10-11-css/
+// Usage:
+//    .box {
+//      line-height: 1.2;
+//      @include IE10-plus() {
+//        line-height: 1;
+//      }
+//    }
+//
+
+@mixin IE10-plus {
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+    @content;
+
+  }
+
+}

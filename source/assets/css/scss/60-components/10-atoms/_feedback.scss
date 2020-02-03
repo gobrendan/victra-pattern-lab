@@ -1,0 +1,22 @@
+/*
+ * feedback -- form validation messages 
+ */ 
+
+.in-c-feedback {
+
+  font-size: 12px; 
+  margin-top: .25rem; 
+
+  &--error {
+
+    color: $error-color; 
+
+  }
+
+  &--success {
+
+    color: $success-color;
+
+  }
+
+}

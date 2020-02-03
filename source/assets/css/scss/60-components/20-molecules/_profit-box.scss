@@ -1,0 +1,25 @@
+/*
+ * profit box
+ */ 
+
+.in-c-profit-box {
+
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; /* this prevents "__btn" element from growing in height */
+
+  &__list {
+
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+
+  }
+
+  &__btn {
+
+    // 
+
+  }
+
+}

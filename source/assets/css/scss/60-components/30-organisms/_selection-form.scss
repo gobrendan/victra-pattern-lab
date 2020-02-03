@@ -1,0 +1,46 @@
+/*
+ * selection form
+ */
+
+.in-c-selection-form {
+
+  //
+
+  &__inner {
+
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 1rem; 
+    margin: 0 auto; // value should be in variable -- used for "box" as well
+    max-width: $in-layout-max-width;
+  
+  }
+
+  &__heading {
+
+    flex: 0 0 100%;
+    margin: 0 0 1rem;
+
+  }
+
+  &__item {
+
+    // 
+
+    &:first-of-type {
+
+      flex: 0 0 350px; 
+      margin: 0 1rem 0 0;
+
+    }
+
+    &:last-of-type {
+
+      flex: 1;
+
+    }
+
+  }
+
+}

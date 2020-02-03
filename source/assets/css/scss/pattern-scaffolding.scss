@@ -1,0 +1,290 @@
+/*
+ * pattern scaffolding -- rules for viewing patterns in Pattern Lab
+ */
+ 
+// variables, tools and utility rules -- also used in style.scss
+
+@import "10-settings/10-variables/breakpoint";
+@import "10-settings/10-variables/color";
+@import "20-tools/10-mixins/custom-property";
+@import "20-tools/10-mixins/grid";
+@import "20-tools/10-mixins/media-query";
+@import "70-utility/bg-color";
+@import "70-utility/text-color";
+
+body {
+
+  overflow-y: auto; /* SharePoint override */
+  
+}
+
+/* pattern lab-specific elements */
+
+#sg-patterns {
+
+  box-sizing: border-box;
+  max-width: 100%; // is this necessary?
+  padding: 0 2rem 2rem;
+
+}
+
+#sg-patterns:before, 
+#sg-patterns:after {
+
+  box-sizing: inherit;
+
+}
+
+.sg-label {
+
+  font-size: 90%;
+  line-height: 1;
+
+}
+
+.sg-pattern-category-title {
+
+  font-weight: bold;
+  font-family: sans-serif;
+  
+  a, 
+  a:visited {
+
+    color: $in-blue;
+
+  }
+
+}
+
+/* custom palettes */
+
+.in-pl-o-palette {
+
+  @include grid(false, 1rem, repeat(auto-fill, minmax(220px, 1fr)), auto); 
+
+  &__item {
+
+    //
+
+  }
+
+  &__box {
+
+    border-color: #ebeced;
+    border-style: solid; 
+    border-width: 1px;
+    height: 100%; /* gives consistent visual heights, specifically for <textarea> demo */
+    padding: 1rem;
+    
+    &--heading {
+
+      padding: 0; 
+      border: 0; 
+
+    }
+
+  }
+
+  &__swatch { 
+
+    //
+
+    &--color {
+
+      height: 0;
+      padding-top: 100%;
+      margin: 0 0 1rem; 
+
+      &.in-u-bg-white {
+
+        border-color: #ebeced;
+        border-style: solid; 
+        border-width: 1px; 
+
+      }
+
+    }
+
+    &--font {
+
+      border-color: #ebeced;
+      border-style: solid; 
+      border-width: 0 0 1px; 
+      margin-bottom: 1rem; 
+      overflow-x: auto; 
+
+    }
+
+    &--button {
+
+      border-color: #ebeced;
+      border-style: solid; 
+      border-width: 0 0 1px; 
+      padding-bottom: 1rem; 
+      margin-bottom: 1rem; 
+
+    } 
+
+    &--heading {
+
+      margin-bottom: 1rem; 
+
+    }
+
+    &--icon {
+
+      border-color: #ebeced;
+      border-style: solid; 
+      border-width: 0 0 1px; 
+      padding-bottom: 1rem; 
+      margin-bottom: 1rem; 
+
+    }
+
+    &--form-element {
+
+      border-color: #ebeced;
+      border-style: solid; 
+      border-width: 0 0 1px; 
+      padding-bottom: 1rem; 
+      margin-bottom: 1rem; 
+
+    }
+
+  }
+
+  &__heading {
+
+    font-weight: bold; 
+    white-space: nowrap; 
+
+    &--big {
+
+      font-weight: normal; 
+      font-size: 2rem; 
+      margin: 0 0 1rem; /* this class is used on a <p> element for font palette -- might want to change to heading or list markup */
+
+    }
+
+  }
+
+  &__details {
+
+    //
+
+  }
+
+  &__list {
+
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+  
+  }
+
+  &__list-item {
+  
+    margin: 0 0 .25rem; 
+
+    &--heading {
+
+      font-weight: bold; 
+
+    }
+
+    &:last-child {
+
+      margin: 0; 
+
+    }
+
+  }
+
+  &--colors {
+
+    //
+    
+  }
+
+  &--fonts {
+    
+    /* adjust grid item width so more of alphabet is visible */
+
+    @include grid(false, 1rem, repeat(auto-fill, minmax(100%, 1fr)), auto); 
+
+    @include mq(40em) {
+
+      @include grid(false, 1rem, repeat(auto-fill, minmax(300px, 1fr)), auto); 
+
+    }
+
+  } 
+
+  &--buttons {
+
+    /* adjust grid item width so CSS classes remain on one line on wider screens */
+
+    @include grid(false, 1rem, repeat(auto-fill, minmax(100%, 1fr)), auto); 
+
+    @include mq(48em) {
+
+      @include grid(false, 1rem, repeat(auto-fill, minmax(27%, 1fr)), auto); 
+
+    }
+
+  }
+
+  &--headings {
+
+    display: block;
+
+    .in-pl-o-palette__item {
+
+      margin: 0 0 2rem; 
+
+      &:last-child {
+
+        margin: 0; 
+
+      }
+
+    }
+
+    /* when viewing heading palette, use same margin value for all headings -- removes unnecessary whitepsace */
+
+    .in-c-heading {
+
+      margin: 0 0 1rem; 
+
+    }
+
+  }
+
+  &--icons {
+
+    @include grid(false, 1rem, repeat(auto-fill, minmax(190px, 1fr)), auto); 
+    
+  }
+
+  &--form-elements {
+
+    /*  */
+
+    @include grid(false, 1rem, repeat(auto-fill, minmax(100%, 1fr)), auto); 
+
+    @include mq(18.75em) {
+
+      @include grid(false, 1rem, repeat(auto-fill, minmax(260px, 1fr)), auto); 
+
+    }
+  }
+
+  /* add margin below text inputs when viewing as "atoms" */
+
+  .in-c-input-text {
+
+    margin: 0 0 1rem;
+
+  }
+
+}

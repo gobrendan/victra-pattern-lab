@@ -1,0 +1,46 @@
+//
+// colors
+//
+
+// corporate palette
+
+$in-navy :             #24314b;
+$in-blue :             #055d93;
+$in-light-blue :       #0076c0;
+$in-teal :             #4fb3cf;
+$in-orange :           #f4bb44;
+$in-violet :           #935fa1;
+
+// alternate palette
+
+$in-bright-orange :    #ff6400; 
+$in-red :              #ce0000; 
+$in-green :            #98cb4e; 
+$in-dark-green :       #3d9400; 
+
+// neutral palette
+
+$in-black :            #000; 
+$in-dark-gray :        #271C02;
+$in-medium-gray :      #455560;
+$in-gray :             #999; 
+$in-light-gray :       #f7f8fa; 
+$in-white :            #fff; 
+
+// alerts 
+
+$in-alert-primary-color : $in-red; 
+$in-alert-major-color :   $in-red;
+$in-alert-minor-color :   $in-orange;
+
+// progress
+
+$in-progress-color :      $in-red;
+$in-progress-background : $in-dark-green;
+
+// validation
+
+$error-color :            $in-red;
+$error-border-color :     $in-red;
+$success-color :          $in-dark-green;
+$success-border-color :   $in-dark-green;

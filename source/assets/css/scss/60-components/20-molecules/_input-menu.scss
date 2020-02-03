@@ -1,0 +1,113 @@
+/*
+ * input menu
+ */ 
+
+.in-c-input-menu {
+
+  display: flex; 
+  position: relative;
+
+  &__btn {
+
+    background-color: $in-navy; 
+    color: $in-white; 
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+    border-radius: 3px 0 0 3px;
+    position: relative; /* helps right side of :focus ring show above text input */
+    z-index: 1; /* keeps button "above" "__list" element when focused */
+
+    i {
+
+      margin-left: 1rem;
+
+    }
+
+    &:focus, 
+    &:active {
+  
+      outline: none;
+      
+    }
+
+  }
+
+  &__input {
+
+    border-width: 1px 1px 1px 0;
+    border-radius: 0 3px 3px 0;
+
+  }
+
+  &__list {
+
+    display: none;
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+    position: absolute;
+    top: 100%; 
+    width: 100%; 
+    background-color: $in-white;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25); // value should be in variable
+    z-index: 2;
+
+  }
+
+  &__item {
+
+    // 
+
+  }
+
+  &__link {
+
+    display: block;
+    font-size: 14px;
+    color: #21314d; 
+    padding: .75rem 1rem .75rem 1.25rem;
+    text-decoration: none;
+    border-left: 4px solid transparent; 
+
+    &:hover {
+
+      background-color: #d6e7f5; // value should be in variable
+      border-left-color: #00558c; // value should be in variable
+
+    }
+
+    &--active {
+
+      background-color: #d6e7f5; // value should be in variable
+      border-left-color: #00558c; // value should be in variable
+
+    }
+
+  }
+
+  &.in-js-active {
+
+    // 
+  
+    .in-c-input-menu__btn {
+  
+      border-radius: 3px 0 0 0;
+  
+    }
+  
+    .in-c-input-menu__input {
+  
+      border-radius: 0 3px 0 0;
+  
+    }
+
+    .in-c-input-menu__list {
+
+      display: block; 
+
+    }
+  
+  }
+
+}

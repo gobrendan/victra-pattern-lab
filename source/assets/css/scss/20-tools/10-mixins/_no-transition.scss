@@ -1,0 +1,9 @@
+//
+// No transition -- overrides default transition rules
+//
+
+@mixin no-transition() {
+
+	transition: none;
+
+}

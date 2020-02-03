@@ -1,0 +1,38 @@
+/*
+ * chart set
+ */ 
+
+.in-c-chart-set {
+
+  display: flex;
+  margin: -1rem 0 0 -1rem;
+
+  &__item {
+
+    width: calc(33.3333% - 1rem);
+    padding: 1rem;
+    margin: 1rem 0 0 1rem;
+
+  }
+
+  /* overrides */
+
+  .in-l-box {
+
+    //
+
+    &__heading {
+
+      padding: 0; 
+      
+    }
+  
+    .in-c-table-wrapper {
+
+      margin: 0; /* override side margins so padding can be around table */
+
+    }
+
+  }
+
+}

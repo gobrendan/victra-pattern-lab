@@ -1,0 +1,16 @@
+//
+// fonts
+//
+
+// Help: 
+// https://developer.mozilla.org/en-US/docs/Web/CSS/font
+// https://css-tricks.com/google-fonts-and-font-display/
+
+$in-font-family-primary :       'Roboto', sans-serif;
+$in-font-primary :              normal normal 400 100%/1.5 $in-font-family-primary;
+$in-font-primary-italic :       italic normal 400 100%/1.5 $in-font-family-primary;
+// $in-font-primary-semibold :     normal normal 600 100%/1.5 $in-font-family-primary;
+$in-font-primary-bold :         normal normal 700 100%/1.5 $in-font-family-primary;
+
+// $font-weight-semibold : 600;
+$font-weight-bold :     700;

@@ -1,0 +1,25 @@
+//
+// visually hidden
+//
+// Hide only visually, but have it available for screen readers:
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+// 
+
+// This was added a placeholder because in IE 9, the .visually-hidden class is not hooking properly
+
+
+// NOTE: moved placeholder to be "silent class," as described here:
+// https://csswizardry.com/2014/01/extending-silent-classes-in-sass/
+
+// %visually-hidden {
+
+//   border: 0;
+//   clip: rect(0 0 0 0);
+//   height: 1px;
+//   margin: -1px;
+//   overflow: hidden;
+//   padding: 0;
+//   position: absolute;
+//   width: 1px;
+
+// }

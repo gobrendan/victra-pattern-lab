@@ -1,0 +1,56 @@
+/*
+ * form elements
+ */ 
+
+.in-c-legend {
+
+  display: block;
+  margin: 0 0 .5rem;
+
+}
+
+.in-c-fieldset {
+
+  padding: 0; 
+  border: 0; 
+  margin: 0 0 1rem; 
+
+  &:last-child {
+
+    margin: 0;
+
+  }
+
+  &--error {
+
+    .in-c-label {
+
+      color: $error-color;
+
+    }
+
+    .in-c-input-text {
+
+      border-color: $error-border-color;
+
+    }
+
+  }
+
+  &--success {
+
+    .in-c-label {
+
+      color: $success-color;
+
+    }
+
+    .in-c-input-text {
+
+      border-color: $success-border-color;
+
+    }
+
+  }
+
+}

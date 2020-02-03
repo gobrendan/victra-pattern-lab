@@ -1,0 +1,108 @@
+/*
+ * button
+ */
+
+.in-c-btn {
+
+  background-color: #24314b;
+  @include custom-property(color, --in-white, $in-white);
+  display: inline-block; 
+  font-size: 1rem; // value should be in variable
+  text-decoration: none; 
+  transition: $in-btn-transition; 
+  cursor: pointer; /* useful for <button> and <input type='submit'> elements */
+  -webkit-appearance: none; /* Safari fix -- the 'button' element has additional user-agent declarations */
+  align-items: center; /* for some reason, Webkit adds Flex-related declaration */
+  padding: .6rem 1.5rem;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  line-height: 21px; /* including this to make sure ".btn" and "input[type=button].btn" have consistent height */
+  border: 0;
+  
+  &:hover {
+
+    // color: #00558c;
+    // background-color: #d9e7f4;
+    color: $in-white;
+    background-color: #205488;
+
+  }
+
+  &:visited {
+
+    //
+
+  }
+
+  &:focus, 
+  &:active {
+
+    outline: -webkit-focus-ring-color auto 5px;
+    
+  }
+
+  &--secondary {
+
+    background-color: white;
+    color: #21314d;
+    border: 1px solid #21314d;
+    padding: calc(.6rem - 1px) calc(1.5rem - 1px); /* calc() function takes border into account -- borders add to height */
+
+    &:hover {
+
+      background-color: #e4e4e4; // value should be in variable
+      color: #21314d;
+
+    }
+
+  }
+
+  &--medium {
+
+    font-size: 14px;
+
+  }
+
+  &--small {
+
+    font-size: 14px;
+    padding: .3rem 1.5rem;
+
+  }
+
+  &--mini {
+
+    font-size: 12px;
+    padding: .25rem .5rem;
+
+  }
+
+  &--plain {
+
+    background-color: transparent;
+    color: #00558c;
+
+    &:hover {
+
+      background-color: $in-light-gray;
+      color: #00558c;
+
+    }
+
+  }
+
+  &:disabled, 
+  &:disabled:hover, 
+  &--disabled, 
+  &--disabled:hover {
+
+    color: #666;
+    cursor: not-allowed; 
+    // opacity: .5; /* should this be in a variable? */
+    background-color: #d9d9d9;
+
+  }
+
+}

@@ -1,0 +1,39 @@
+/*
+ * comment list 
+ */ 
+
+ .in-c-comment-list {
+
+  list-style: none;
+  padding: 0; 
+  margin: 0;
+
+  &__item {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 1rem; 
+  
+  }
+
+  &__name {
+
+    font-weight: bold; 
+    color: $in-blue;
+    margin-right: 1rem; 
+
+  }
+
+  &__date {
+
+    color: $in-gray;
+
+  }
+
+  &__text {
+
+    flex: 0 0 100%; 
+
+  }
+
+}

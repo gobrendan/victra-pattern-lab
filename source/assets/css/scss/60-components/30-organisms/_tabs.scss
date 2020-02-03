@@ -1,0 +1,393 @@
+/*
+ * tabs
+ */ 
+
+$tabs-list-header-height : 78px; // used for proper positioning and scrolling of "__list" element when using vertical tabs
+
+.in-c-tabs {
+
+  width: 100%;
+  margin: 0 0 2rem;
+  
+  /* position and z-index declarations needed for empty state (see below) */
+
+  position: relative;
+  z-index: 1;
+
+  &__list-wrap {
+
+    //
+
+  }
+  
+  &__list-header {
+
+    //
+
+  }
+
+  &__list {
+
+    list-style: none;
+    padding: 0 0 0 1rem; 
+    border-bottom: 1px solid $in-gray;
+    margin: 0;
+
+  }
+
+  &__header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 .75rem;
+
+  }
+
+  &__heading {
+
+    //
+
+  }
+
+  &__search-box {
+
+    //
+  
+  }
+
+  &__btn {
+
+    //
+
+  }
+
+  &__item {
+
+    display: inline-block;
+
+  }
+
+  &__link {
+
+    display: block;
+    color: $in-blue;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    &[aria-selected="true"] {
+
+      border: 1px solid $in-gray;
+      background: #fff;
+      border-bottom: 0;
+      position: relative;
+      font-weight: bold;
+
+      &:hover {
+
+        color: $in-blue;
+        background-color: #fff; 
+  
+      }
+
+      /* use pseudo element to cover border -- provides visually "tab" appearance */
+
+      &:after {
+
+        display: block; 
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: white; 
+
+      }
+      
+    }
+
+    &:hover {
+
+      color: black;
+      background-color: #ccc; 
+
+    }
+
+    &:focus {
+
+      outline: none;
+      box-shadow: none;
+      
+    }
+
+  }
+
+  &__text {
+
+    // 
+
+  }
+
+  &__helper {
+
+    display: none;
+
+  }
+
+  &__details {
+
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+
+  }
+
+  &__details-item {
+
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    color: $in-navy;
+
+  }
+  
+  &__content {
+
+    background-color: white;
+    padding: 1rem;
+    min-height: 400px; /* magic number -- prevents "no results" element from being visible */
+
+    &[aria-hidden=true] { 
+  
+      display: none; 
+    
+    }
+
+  }
+
+  &__no-results {
+
+    // 
+
+  }
+
+  /* empty state message -- positioned behind tabs (visible where there are no tabs) */
+
+  &__no-results {
+
+    position: absolute;
+    left: calc(350px + 1rem); /* value should be in variable -- value takes width of "__list-wrap" element and its right margin into account */
+    bottom: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: -1;
+
+  }
+
+  /* use pseudo element for empty state background (visible when there are no tabs) */
+
+  &:after {
+
+    display: block;
+    content: "";
+    width: 100%;
+    background: white;
+    position: absolute;
+    left: calc(350px + 1rem); /* value should be in variable -- value takes width of "__list-wrap" element and its right margin into account */
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: auto;
+    z-index: -2; /* value should be klower than for the "__no-results" element */
+
+  }
+
+  /* vertical tabs */
+
+  &--stubs {
+
+    display: flex; 
+    width: 100%; 
+    max-width: $in-layout-max-width;
+    margin: 0 auto 2rem; // value should be in variable -- used for "box" as well
+    flex: 1;
+
+    .in-c-tabs__list-wrap {
+
+      flex: 0 0 350px; 
+      background-color: white; 
+      margin: 0 1rem 0 0;
+      box-shadow: 1px 2px 5px rgba(000,000,000,.25);
+      position: relative; /* declaration necessary for to make "__list" element scrollable */
+
+    }
+
+    .in-c-tabs__list-header {
+
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      height: $tabs-list-header-height; 
+
+    }
+
+    .in-c-tabs__search-box {
+
+      flex: 0 0 150px; 
+      margin: 0 0 0 auto;
+
+    }
+
+    .in-c-tabs__list {
+
+      padding: 0; 
+      border: 0;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 78px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+      
+        -webkit-appearance: none;
+
+      }
+
+      &::-webkit-scrollbar:vertical {
+
+        width: 11px;
+
+      }
+
+      &::-webkit-scrollbar:horizontal {
+
+        // height: 11px;
+
+      }
+
+      &::-webkit-scrollbar-thumb {
+      
+        border-radius: 8px;
+        border: 2px solid white; /* should match background, can't be transparent */
+        background-color: rgba(0, 0, 0, .5);
+
+      }
+
+    }
+
+    .in-c-tabs__heading {
+
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $in-navy;
+
+    }
+
+    .in-c-tabs__item {
+
+      display: block; 
+
+    }
+
+    .in-c-tabs__link {
+
+      color: $in-blue;
+      font-weight: bold;
+
+      &[aria-selected="true"] {
+
+        border-width: 0 0 0 6px;
+        border-color: $in-navy;
+        padding-left: calc(1rem - 6px); /* takes border width into account, improves alignment with other tabs */
+        background-color: #d9e7f4;
+    
+        &:after {
+  
+          display: none;
+  
+        }
+        
+      }
+
+    }
+
+    .in-c-tabs__text {
+
+      margin: 0 0 .25rem; 
+
+    }
+
+    .in-c-tabs__helper {
+
+      display: block;
+      font-size: 14px;
+      font-weight: normal;
+      color: $in-dark-gray;
+  
+    }
+
+    .in-c-tabs__content {
+
+      width: 100%;
+
+    }
+
+    .in-c-tabs__content-heading {
+
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #24314b;
+      margin: 0; 
+
+      span {
+
+        margin: 0 2rem 0 0;
+  
+        &:last-child {
+  
+          margin: 0;
+  
+        }
+        
+      }
+
+    }
+
+    /* empty state message -- positioned behind tabs (visible where there are no tabs) */
+
+    .in-c-tabs__no-results {
+
+      left: calc(350px + 1rem); /* value should be in variable -- value takes width of "__list-wrap" element and its right margin into account */
+
+    }
+
+    /* use pseudo element for empty state background (visible when there are no tabs) */
+
+    &:after {
+
+      left: calc(350px + 1rem); /* value should be in variable -- value takes width of "__list-wrap" element and its right margin into account */
+
+    }
+
+  }
+
+  /* apply margins to some components */
+
+  .in-l-form {
+
+    margin: 0 0 1rem;
+
+  }
+
+}

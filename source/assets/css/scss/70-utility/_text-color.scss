@@ -1,0 +1,195 @@
+/*
+ * text color
+ */
+
+.in-u-navy {
+
+  @include custom-property(color, --in-navy, $in-navy);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-navy, $in-navy);
+
+  }
+
+}
+
+.in-u-blue {
+
+  @include custom-property(color, --in-blue, $in-blue);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-blue, $in-blue);
+
+  }
+
+}
+
+.in-u-light-blue {
+
+  @include custom-property(color, --in-light-blue, $in-light-blue);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-light-blue, $in-light-blue);
+
+  }
+
+}
+
+.in-u-teal {
+
+  @include custom-property(color, --in-teal, $in-teal);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-teal, $in-teal);
+
+  }
+
+}
+
+.in-u-orange {
+
+  @include custom-property(color, --in-orange, $in-orange);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-orange, $in-orange);
+
+  }
+
+}
+
+.in-u-violet {
+
+  @include custom-property(color, --in-violet, $in-violet);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-violet, $in-violet);
+
+  }
+
+}
+
+.in-u-bright-orange {
+
+  @include custom-property(color, --in-bright-orange, $in-bright-orange);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-bright-orange, $in-bright-orange);
+
+  }
+
+}
+
+.in-u-red {
+
+  @include custom-property(color, --in-red, $in-red);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-red, $in-red);
+
+  }
+
+}
+
+.in-u-green {
+
+  @include custom-property(color, --in-green, $in-green);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-green, $in-green);
+
+  }
+
+}
+
+.in-u-dark-green {
+
+  @include custom-property(color, --in-dark-green, $in-dark-green);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-dark-green, $in-dark-green);
+
+  }
+
+}
+
+.in-u-black {
+
+  @include custom-property(color, --in-black, $in-black);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-black, $in-black);
+
+  }
+
+}
+
+.in-u-dark-gray {
+
+  @include custom-property(color, --in-dark-gray, $in-dark-gray);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-dark-gray, $in-dark-gray);
+
+  }
+
+}
+
+.in-u-medium-gray {
+
+  @include custom-property(color, --in-medium-gray, $in-medium-gray);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-medium-gray, $in-medium-gray);
+
+  }
+
+}
+
+.in-u-gray {
+
+  @include custom-property(color, --in-gray, $in-gray);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-gray, $in-gray);
+
+  }
+
+}
+
+.in-u-light-gray {
+
+  @include custom-property(color, --in-light-gray, $in-light-gray);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-light-gray, $in-light-gray);
+
+  }
+
+}
+
+.in-u-white {
+
+  @include custom-property(color, --in-white, $in-white);
+
+  &:visited { /* override SharePoint CSS */
+
+    @include custom-property(color, --in-white, $in-white);
+
+  }
+
+}

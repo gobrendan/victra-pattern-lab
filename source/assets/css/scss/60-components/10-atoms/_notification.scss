@@ -1,0 +1,161 @@
+//
+// notification -- powered by Toastify 
+// 
+
+/*!
+ * Toastify js 1.6.1
+ * https://github.com/apvarun/toastify-js
+ * @license MIT licensed
+ *
+ * Copyright (C) 2018 Varun A P
+ */
+
+.toastify {
+
+  padding: 1rem 2rem 1rem 2.5rem;
+  color: #fff;
+  display: inline-block;
+  box-shadow: 1px 2px 5px rgba(000,000,000,.25); // value should be in variable
+  background: #999;
+  position: fixed;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  max-width: calc(50% - 20px);
+  z-index: 2147483647;
+
+}
+
+.toastify-success {
+
+  color: white;
+  background-color: green; 
+
+  &:before {
+
+    font-family: 'in-icon-set';
+    content: "\e900";
+    position: absolute;
+    left: 1rem; 
+    top: .85rem;
+
+  }
+
+}
+
+.toastify-error {
+
+  color: white;
+  background-color: red; 
+
+  &:before {
+
+    font-family: 'in-icon-set';
+    content: "\e904";
+    position: absolute;
+    left: 1rem; 
+    top: .85rem;
+
+  }
+
+}
+
+.toastify-info {
+
+  color: black;
+  background-color: #ffde93; 
+
+  &:before {
+
+    font-family: 'in-icon-set';
+    content: "\e903";
+    position: absolute;
+    left: 1rem; 
+    top: .85rem;
+
+  }
+
+}
+
+.toastify.on {
+
+  opacity: 1;
+
+}
+
+.toast-close {
+
+  opacity: 0.4;
+  padding: 0 5px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+
+  &:hover {
+
+    opacity: 1;
+
+  }
+
+}
+
+.toastify-right {
+
+  right: 15px;
+
+}
+
+.toastify-left {
+
+  left: 15px;
+
+}
+
+.toastify-top {
+
+  top: -150px;
+
+}
+
+.toastify-bottom {
+
+  bottom: -150px;
+
+}
+
+.toastify-rounded {
+
+  border-radius: 25px;
+
+}
+
+.toastify-avatar {
+
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 5px;
+  border-radius: 2px;
+
+}
+
+.toastify-center {
+
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  max-width: fit-content;
+
+}
+
+// @media only screen and (max-width: 360px) {
+//   .toastify-right, .toastify-left {
+//       margin-left: auto;
+//       margin-right: auto;
+//       left: 0;
+//       right: 0;
+//       max-width: fit-content;
+//   }
+// }

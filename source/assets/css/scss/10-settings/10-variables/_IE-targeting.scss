@@ -1,0 +1,48 @@
+//
+// feature targeting -- mostly for IE 9-11
+//
+
+// Edge   flexbox     flexboxlegacy     no-flexboxtweener flexwrap    csstransitions 
+// IE 11  flexbox     no-flexboxlegacy  flexboxtweener    flexwrap    csstransitions 
+// IE 10  no-flexbox  no-flexboxlegacy  flexboxtweener    flexwrap    csstransitions 
+// IE 9   no-flexbox  no-flexboxlegacy  no-flexboxtweener no-flexwrap no-csstransitions 
+
+
+// $ie_11 :          .in-mod-flexbox.in-mod-no-cssgrid;
+// $ie_10 :          .in-mod-no-flexbox;
+// $ie_9 :           .in-mod-no-flexbox.in-mod-no-flexwrap;
+// $ie_9-10 :        .in-mod-no-flexbox;
+// $ie_9-10-11       .in-mod-no-flexbox, .in-mod-flexbox.in-mod-flexboxtweener;
+// $ie_10-11 :       .in-mod-flexboxtweener;
+// $ie_10-11-Edge :  .in-mod-flexwrap;
+
+
+// IE10 and IE11   (Method 1)
+// ==================
+// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+// 	.selector { property:value; }
+// }
+// ---------------------------------
+
+// IE10 and IE11   (Method 2)
+// ==================
+// @media all and (-ms-high-contrast:none){
+//      .foo { color: green } /* IE10 */
+//      *::-ms-backdrop, .foo { color: red } /* IE11 */
+// }
+// ---------------------------------
+
+// /*----MS Edge Browser CSS Start----*/
+// @supports (-ms-accelerator:true) {
+// 	.selector { property:value; } 
+// 	.edu_input_field{ width:15.1% !important; }
+// }
+// /*----MS Edge Browser CSS End----*/
+// ---------------------------------
+
+// @supports (-ms-accelerator:true) { works only for IE12 and IE13.
+//   @supports (-ms-ime-align:auto) { works for all Edge versions (currently up to IE15).
+  
+//   Since Edge supports feature query, in many cases you don't need a general hack but you can directly ask for the feature you want to use.
+//   e.g. to use Grid layout, use:
+//   @supports (display:-ms-grid) { ... }

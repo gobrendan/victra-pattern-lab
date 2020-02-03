@@ -1,0 +1,28 @@
+/*
+ * loading
+ */
+
+.in-c-loading {
+
+  display: flex; /* removes spaced between text and psuedo element */
+  font-size: $in-font-size-default;
+  font-weight: 700;
+
+  &:after {
+
+    overflow: hidden;
+    display: inline-block; 
+    vertical-align: bottom;
+    animation: ellipsis steps(4,end) 900ms infinite;
+    content: "\2026"; /* ascii code for the ellipsis character */
+    width: 0;
+
+  }
+
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}

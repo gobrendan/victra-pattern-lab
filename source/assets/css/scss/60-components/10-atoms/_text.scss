@@ -1,0 +1,106 @@
+/* 
+ * text 
+ */ 
+
+.in-c-link {
+
+  @include custom-property(color, --in-light-blue, $in-light-blue);
+  text-decoration: underline;
+
+  &:visited {
+
+    @include custom-property(color, --in-light-blue, $in-light-blue); /* override SharePoint CSS */
+
+  }
+
+  &:hover {
+
+    @include custom-property(color, --in-navy, $in-navy);
+    text-decoration: none;
+
+  }
+
+  &:focus {
+
+    outline: -webkit-focus-ring-color auto 5px;
+    
+  }
+
+  &--no-underline {
+
+    text-decoration: none;
+
+    &:hover {
+
+      text-decoration: none;
+      
+    }
+
+  }
+
+}
+
+.in-c-label {
+
+  display: inline-block;
+  margin: 0 0 .5rem;
+
+  &__helper {
+
+    color: #666; // value should be variable 
+    margin-left: 1rem; 
+
+  }
+
+}
+
+/* validation -- might want this in separate file */
+
+.has-error { /* applied with validate.js */
+
+  //
+
+  .in-c-label {
+
+    color: $error-color;
+
+  }
+
+  .in-c-input-text {
+
+    border-color: $error-border-color;
+
+  }
+
+}
+
+.has-success { /* applied with validate.js */
+
+  //
+
+  .in-c-label {
+
+    color: $success-color;
+
+  }
+
+}
+
+.in-c-error-box {
+
+  color: $error-color;
+
+}
+
+.help-block {
+
+  padding: .5rem 0 0;
+  margin: 0;
+
+  &.error {
+
+    // 
+
+  }
+
+}

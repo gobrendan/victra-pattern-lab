@@ -1,0 +1,13 @@
+//
+// forms
+//
+
+%form_label {
+
+  display: block;
+  font-weight: normal;
+  font-family: $in-font-primary-bold;
+  padding-bottom: 3px; /* NOTE: mimics other NC sites; using margin might be more appropriate */
+  margin: 0 0 .75rem; 
+
+}

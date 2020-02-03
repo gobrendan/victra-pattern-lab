@@ -1,0 +1,108 @@
+/*
+ * breadcrumbs
+ */ 
+
+.in-c-breadcrumbs {
+
+  display: flex; 
+  margin: 0 0 2rem;
+
+  &__link {
+
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+
+      // 
+
+      .in-c-breadcrumbs__text {
+
+        text-decoration: underline;
+
+      }
+
+    }
+
+    &:last-child {
+
+      // 
+
+      .in-c-breadcrumbs__icon {
+
+        display: none; 
+
+      }
+      
+    }
+
+  }
+
+  &__icon {
+
+    margin: 0 .5rem;
+
+  }
+
+  &__text {
+
+    // 
+
+  }
+
+}
+
+// .in-c-breadcrumbs {
+
+//   @include custom-property(background-color, --in-light-gray, $in-light-gray); 
+//   @include custom-property(max-width, --in-layout-max-width, $in-layout-max-width); 
+//   padding: .5rem 1rem; 
+//   margin: auto; 
+
+//   &__list {
+
+//     display: flex; 
+//     list-style: none; 
+//     padding: 0; 
+//     margin: 0; 
+
+//   }
+
+//   &__item {
+
+//     margin: 0 .5rem 0 0;
+//     display: flex;
+//     align-items: center;
+
+//     &:after {
+
+//       // @include custom-property(border-left-color, --in-dark-gray, $in-dark-gray);
+//       content: "";
+//       width: 0px;
+//       height: 0px;
+//       border-top: 5px solid transparent;
+//       border-bottom: 5px solid transparent;
+//       border-left: 5px solid $in-dark-gray; /* refactor this declaration so color is managed in "custom property" mixin */
+//       display: block;
+
+//     }
+
+//   }
+
+//   &__link {
+
+//     text-transform: uppercase;
+//     font-size: $in-font-size-eta; /* refactor value to use "custom property" mixin */
+//     font-weight: bold; 
+//     margin: 0 .5rem 0 0;
+
+//     &:visited {
+
+//       @include custom-property(color, --in-blue, $in-blue); /* override SharePoint CSS */
+      
+//     }
+
+//   }
+  
+// }

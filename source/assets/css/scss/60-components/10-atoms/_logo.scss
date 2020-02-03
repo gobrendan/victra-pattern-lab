@@ -1,0 +1,90 @@
+/*
+ * logo
+ */ 
+
+.in-c-logo { 
+
+  //
+
+  &__link {
+
+    display: block;
+
+  }
+
+  &--pricing {
+
+    display: inline-block; 
+    
+    .in-c-logo__link {
+
+      font-size: 40px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      line-height: 1;
+      color: $in-navy;
+
+    }
+
+  }
+
+  &--pricing-on-dark {
+
+    display: inline-block; 
+    
+    .in-c-logo__link {
+
+      font-size: 40px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      line-height: 1;
+      color: white;
+
+    }
+
+  }
+
+  &--td {
+
+    width: 100%;
+    max-width: 265px; 
+
+    .in-c-logo__link {
+
+      background-size: contain;
+      background-image: url(../img/tech-data-logo-blue.svg);
+      background-repeat: no-repeat;
+      background-color: transparent;
+      text-indent: 200%; 
+      white-space: nowrap;
+      height: 0; 
+      overflow: hidden; 
+      padding-top: 22.4%; /* uses intrinsic ratio pattern -- 224/1000 */
+    
+    }
+
+  }
+
+  &--td-on-dark {
+
+    width: 100%;
+    max-width: 265px; 
+
+    .in-c-logo__link {
+
+      background-size: contain;
+      background-image: url(../img/tech-data-logo-white.svg);
+      background-repeat: no-repeat;
+      background-color: transparent;
+      text-indent: 200%; 
+      white-space: nowrap;
+      height: 0; 
+      overflow: hidden; 
+      padding-top: 22.4%; /* uses intrinsic ratio pattern -- 224/1000 */
+    }
+
+  }
+
+}

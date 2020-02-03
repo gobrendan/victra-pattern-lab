@@ -1,0 +1,49 @@
+/*
+ * user menu
+ */ 
+
+.in-c-user-menu {
+
+  position: relative;
+  min-width: 240px; // value should be in variable -- used for "primary nav" component
+  margin: 0 0 0 auto;
+
+  &__user-box {
+
+    // 
+
+    margin: 0 0 0 auto;
+
+  }
+
+  &__menu-box {
+
+    // 
+
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px); /* value is magic number */
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+  }
+
+  &.in-is-active {
+
+    .in-c-user-menu__user-box {
+      
+      background-color: #ccc;
+      box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
+
+    }
+
+    .in-c-user-menu__menu-box {
+
+      display: block; 
+
+    }
+
+  }
+
+}

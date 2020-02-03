@@ -1,0 +1,71 @@
+/*
+ * utility / visibility
+ */
+
+// [hidden],
+.in-u-hidden {
+
+  display: none !important; /* does this need "!important"? */
+
+}
+
+.in-u-visible {
+
+  display: block;
+
+}
+
+/*
+ * NOTE: hide only visually, but have it available for screen readers:
+ *       http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+/* NOTE: using both class names since they're both being used */
+
+//.visuallyhidden,
+.in-u-visually-hidden, 
+%visually-hidden {
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+}
+
+.in-u-visuallyhidden {
+
+  @extend %visually-hidden;
+
+}
+
+/*
+ * NOTE: extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard:
+ *       https://www.drupal.org/node/897638
+ */
+
+.in-u-visuallyhidden.focusable:active,
+.in-u-visuallyhidden.focusable:focus {
+
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+
+}
+
+/*
+ * NOTE: hide visually and from screen readers, but maintain layout
+ */
+
+.in-u-invisible {
+
+  visibility: hidden;
+
+}

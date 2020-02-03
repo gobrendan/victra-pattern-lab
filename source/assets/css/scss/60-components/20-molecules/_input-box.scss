@@ -1,0 +1,40 @@
+/*
+ * input box 
+ */ 
+
+.in-c-input-box {
+
+  display: flex; 
+  align-items: center;
+
+  &__input {
+
+    flex: 0 0 180px; 
+
+    & + .in-c-input-box__icon {
+
+      margin: 0 0 0 1rem; /* include margin if icon exists */
+
+    }
+
+  }
+
+  &__icon {
+
+    // 
+
+    & + .in-c-input-box__text {
+
+      margin: 0 0 0 .5rem; /* include margin if text exists */
+
+    }
+
+  }
+
+  &__text {
+
+    //
+
+  }
+
+}

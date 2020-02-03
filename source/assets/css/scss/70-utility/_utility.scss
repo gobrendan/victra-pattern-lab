@@ -1,0 +1,71 @@
+/*
+ * utility
+ */
+
+.in-u-nobr {
+
+  white-space: nowrap;
+
+}
+
+.in-u-text-center {
+
+  text-align: center;
+
+}
+
+.in-u-no-text-transform {
+
+  text-transform: none;
+
+}
+
+.in-u-text-left {
+
+  text-align: left;
+
+  /* override rules that affect alignment */
+
+  table td & {
+
+    text-align: left;
+
+  }
+
+}
+
+.in-u-text-right {
+
+  text-align: right;
+
+}
+
+.in-u-float-right {
+
+  float: right;
+
+}
+
+.in-u-text-no-wrap {
+
+  white-space: nowrap;
+
+}
+
+.in-u-required {
+
+  //
+
+}
+
+.in-u-error {
+
+  //
+
+}
+
+.in-u-no-top-margin {
+
+  margin-top: 0;
+
+}

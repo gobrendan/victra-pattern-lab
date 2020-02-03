@@ -1,0 +1,42 @@
+/*
+ * custom properties
+ */
+
+:root {
+
+  /* primary palette */
+
+  --in-navy :             #{$in-navy}; 
+  --in-blue :             #{$in-blue}; 
+  --in-light-blue :       #{$in-light-blue}; 
+  --in-teal :             #{$in-teal}; 
+  --in-orange :           #{$in-orange}; 
+  --in-violet :           #{$in-violet}; 
+
+  /* alternate palette */
+
+  --in-bright-orange :    #{$in-bright-orange}; 
+  --in-red :              #{$in-red}; 
+  --in-green :            #{$in-green}; 
+  --in-dark-green :       #{$in-dark-green}; 
+
+  /* neutral palette */
+
+  --in-black :            #{$in-black}; 
+  --in-dark-gray :        #{$in-dark-gray}; 
+  --in-medium-gray :      #{$in-medium-gray}; 
+  --in-gray :             #{$in-gray}; 
+  --in-light-gray :       #{$in-light-gray}; 
+  --in-white :            #{$in-white}; 
+
+  /* alerts */
+
+  --in-alert-major-color : #{$in-alert-primary-color}; 
+  --in-alert-minor-color : #{$in-alert-minor-color}; 
+
+  /* sizes */
+
+  --in-layout-min-width : #{$in-layout-min-width}; 
+  --in-layout-max-width : #{$in-layout-max-width}; 
+
+}

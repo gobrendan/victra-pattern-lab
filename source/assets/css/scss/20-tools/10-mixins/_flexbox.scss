@@ -1,0 +1,28 @@
+//
+// Flexbox
+//
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
+//
+
+@mixin flexbox {
+
+  display: flex;
+
+}
+
+@mixin flexbox-align-items($flex-item-alignment) {
+
+  align-items: $flex-item-alignment;
+
+  // align-items: flex-start | flex-end | center | baseline | stretch
+
+}
+
+@mixin flexbox-justify-content($flex-content-justification) {
+
+  justify-content: $flex-content-justification;
+
+  // justify-content: flex-start | flex-end | center | space-between | space-around
+
+}

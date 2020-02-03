@@ -1,0 +1,17 @@
+/*
+ * chart box 
+ */ 
+
+.in-c-chart-box {
+
+  background-color: $in-white;
+  padding: 1rem; 
+  box-shadow: 1px 2px 5px rgba(000,000,000,.25); // value should be in variable
+
+  &__heading {
+
+    //
+
+  }
+
+}

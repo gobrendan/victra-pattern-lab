@@ -1,0 +1,46 @@
+/*
+ * login form
+ */ 
+
+.in-c-login-form {
+
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 1px 2px 5px rgba(000,000,000,.25); // value should be in variable
+  width: 100%;
+  max-width: 465px;
+  // margin: 0 auto 2rem; // value should be in variable -- used for "tabs--stubs" as well
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(25%);
+
+  &__heading {
+
+    @extend .in-c-heading--alpha;
+    text-align: center;
+
+  }
+
+  &__btn-wrapper {
+
+    padding: 2rem 0;
+    text-align: center;
+
+  }
+
+  &__btn {
+
+    // 
+
+  }
+
+  &__footer {
+
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+
+  }
+
+}

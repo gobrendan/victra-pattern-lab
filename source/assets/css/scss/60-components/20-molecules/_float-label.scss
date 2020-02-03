@@ -1,0 +1,73 @@
+// 
+// float label
+// 
+
+// This following CSS is inspired by Emil Björklund's post, "Revisiting the Float Label pattern with CSS"
+// https://thatemil.com/blog/2016/01/23/floating-label-no-js-pure-css
+// https://css-tricks.com/float-labels-css/
+
+.in-c-float-label {
+
+  display: flex;
+  flex-flow: column-reverse; /* reverse the order so label is on top. */
+
+  &__label, 
+  &__input-text {
+
+    transition: all 0.2s;
+    touch-action: manipulation;
+
+  }
+
+  &__input-text {
+
+    cursor: text;
+
+    &:focus {
+
+      //
+
+      &::-webkit-input-placeholder {
+
+        opacity: 1; /* show placeholder when the input has focus */
+    
+      }
+  
+    }
+
+    &:placeholder-shown + label {
+
+      cursor: text;
+      max-width: 66.66%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transform-origin: left bottom;
+      transform: translate(calc(0.75rem + 1px), calc(2.75rem - 1px)) scale(1); /* magic numbers to make sure placeholder and label text have same position */
+      
+    }
+
+    &:not(:placeholder-shown) + label,
+    &:focus + label {
+  
+      transform: translate(0, 0) scale(1); /* remove label transform when element has focus and when placeholder is not shown */
+      cursor: pointer;
+  
+    }
+
+  }
+
+  &__label {
+
+    //
+
+  }
+
+  ::-webkit-input-placeholder {
+
+    opacity: 0;
+    transition: inherit;
+
+  }
+
+}

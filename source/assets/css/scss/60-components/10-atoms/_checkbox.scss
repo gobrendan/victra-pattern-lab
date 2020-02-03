@@ -1,0 +1,312 @@
+/*
+ * checkbox
+ */
+
+.in-c-checkbox {
+
+  font-size: .8rem; /* checkbox elements are used in some tables; resetting this here makes sure <td> font-size value doesn't affect display */
+
+  &__label {
+
+    @extend %label; 
+    line-height: 1.2em;
+    padding-top: 2px; /* helps vertically-align text with checkbox element when text is on a single line */
+    position: relative;
+    cursor: pointer; 
+    padding-left: 2.5em; /* magic numner -- takes width of checkbox element (pseudo element) into account */
+    margin: 0;
+
+    /* magic numbers -- maintain consistent height/width when text isn't included (use height of element when at least one line of text is included) */
+
+    min-height: 20px; 
+    min-width: 20px; 
+    
+  }
+
+  [type="checkbox"] + .in-c-checkbox__label {
+
+    // @extend %label; 
+
+    // position: relative;
+    // padding-left: 2.5em; /* magic numner -- takes width of checkbox element (pseudo element) into account */
+    // cursor: pointer; 
+    // margin: 0;
+
+    // &:empty {
+
+    //   padding-left: 0; /* when label text is not included, remove unnecesary padding; this improves display when the checkbox is centered */
+    //   display: block; /* removes additional space below element */
+
+    //   /* when centered, use explicit width and "margin: auto" technique to center element */
+
+    //   .in-u-center & {
+
+    //     width: 8rem; /* magic number */
+    //     margin: auto;
+
+    //   }
+
+    // }
+
+  }
+
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+
+    position: absolute;
+    left: -9999px;
+
+  }
+
+  [type="checkbox"]:not(:checked) + .in-c-checkbox__label,
+  [type="checkbox"]:checked + .in-c-checkbox__label {
+
+    // position: relative;
+    // padding-left: 2.5em; /* magic numner -- takes width of checkbox element (pseudo element) into account */
+    // cursor: pointer; 
+    // margin: 0;
+
+    // &:empty {
+
+    //   padding-left: 0; /* when label text is not included, remove unnecesary padding; this improves display when the checkbox is centered */
+    //   display: block; /* removes additional space below element */
+
+    //   /* when centered, use explicit width and "margin: auto" technique to center element */
+
+    //   .in-u-center & {
+
+    //     width: 8rem; /* magic number */
+    //     margin: auto;
+
+    //   }
+
+    // }
+
+  }
+
+  [type="checkbox"]:not(:checked) + .in-c-checkbox__label:before,
+  [type="checkbox"]:checked + .in-c-checkbox__label:before {
+
+    border-color: #ddd;
+    border-style: solid;
+    border-width: .13em;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    background: $in-white; 
+    transform: translateY(-50%);
+
+  }
+
+  [type="checkbox"]:checked + .in-c-checkbox__label:before {
+
+    //
+
+  }
+
+  [type="checkbox"]:not(:checked) + .in-c-checkbox__label:after,
+  [type="checkbox"]:checked + .in-c-checkbox__label:after {
+
+    @include custom-property(border-color, --in-blue, $in-blue);
+    content: "";
+    width: .8em;
+    height: 1.5em;
+    border-style: solid;
+    border-width: 0 5px 5px 0;
+    position: absolute;
+    left: .4em;
+    top: calc(50% - .3em);
+    transform: rotate(45deg) translateY(-50%) translateX(-50%); /* the translate values makes the checkmark vertically centered (in conjunction with the "top" declaration) */
+
+  }
+
+  [type="checkbox"]:not(:checked) + .in-c-checkbox__label:after {
+
+    opacity: 0;
+    transform: scale(0);
+
+  }
+
+  [type="checkbox"]:checked + .in-c-checkbox__label:after {
+
+    opacity: 1;
+
+  }
+
+  [type="checkbox"]:disabled:not(:checked) + .in-c-checkbox__label:before,
+  [type="checkbox"]:disabled:checked + .in-c-checkbox__label:before {
+
+    @include custom-property(border-color, --in-gray, $in-gray);
+
+  }
+
+  [type="checkbox"]:disabled:checked + .in-c-checkbox__label:after {
+
+    @include custom-property(border-color, --in-gray, $in-gray);
+
+  }
+
+  [type="checkbox"]:disabled:checked + .in-c-checkbox__label:before {
+
+    @include custom-property(border-color, --in-gray, $in-gray);
+
+  }
+
+  [type="checkbox"]:disabled + .in-c-checkbox__label {
+
+    @include custom-property(color, --in-medium-gray, $in-medium-gray);
+    cursor: not-allowed; 
+
+  }
+
+  [type="checkbox"]:checked:focus + .in-c-checkbox__label:before {
+
+    //
+
+  }
+
+  [type="checkbox"]:not(:checked):hover + .in-c-checkbox__label:before, 
+  [type="checkbox"]:not(:checked):focus + .in-c-checkbox__label:before {
+
+    //
+
+  }
+
+  &__tooltip {
+
+    color: $in-blue; 
+    vertical-align: middle; 
+    margin-left: .25rem;
+
+  }
+
+  &--flipped {
+
+    /* display checkmark after the text */
+
+    [type="checkbox"]:not(:checked) + .in-c-checkbox__label,
+    [type="checkbox"]:checked + .in-c-checkbox__label {
+
+      padding-left: 0;
+      padding-right: 1.95em;
+
+    }
+
+    [type="checkbox"]:not(:checked) + label:before,
+    [type="checkbox"]:checked + label:before {
+  
+      left: auto; 
+      right: 0; 
+  
+    }
+
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after {
+  
+      left: auto; /* override default */
+      right: -.075em;
+  
+    }
+
+  }
+
+  &--blue {
+
+    color: $in-blue; 
+
+    [type="checkbox"]:not(:checked) + .in-c-checkbox__label:after,
+    [type="checkbox"]:checked + .in-c-checkbox__label:after {
+
+      @include custom-property(border-color, --in-blue, $in-blue);
+
+    }
+
+  }
+
+  &--green {
+
+    @include custom-property(color, --in-green, $in-green);
+
+    [type="checkbox"]:not(:checked) + .in-c-checkbox__label:after,
+    [type="checkbox"]:checked + .in-c-checkbox__label:after {
+
+      @include custom-property(border-color, --in-green, $in-green);
+
+    }
+
+  }
+
+  &--orange {
+
+    @include custom-property(color, --in-bright-orange, $in-bright-orange);
+
+    [type="checkbox"]:not(:checked) + .in-c-checkbox__label:after,
+    [type="checkbox"]:checked + .in-c-checkbox__label:after {
+
+      @include custom-property(border-color, --in-bright-orange, $in-bright-orange);
+
+    }
+
+  }
+
+  &--red {
+
+    @include custom-property(color, --in-red, $in-red);
+
+    [type="checkbox"]:not(:checked) + .in-c-checkbox__label:after,
+    [type="checkbox"]:checked + .in-c-checkbox__label:after {
+
+      @include custom-property(border-color, --in-red, $in-red);
+
+    }
+
+  }
+
+  /* when inside a table cell, match sizing (font-size) with other checkbox components */
+
+  &--th, 
+  &--td {
+
+    /*  */
+
+    .in-c-checkbox__label {
+      
+      font-weight: bold;
+
+    }
+
+    [type="checkbox"] + label:before, 
+    [type="checkbox"] + label:after {
+
+      font-size: .8rem;
+
+    }
+
+  }
+
+  &--no-text {
+
+    //
+
+    .in-c-checkbox__label {
+
+      padding-left: 0; /* when label text is not included, remove unnecesary padding; this improves display when the checkbox is centered */
+      display: block; /* removes additional space below element */
+
+      /* when centered, use explicit width and "margin: auto" technique to center element */
+
+      .in-u-center & {
+
+        width: 20px; /* width of the checkbox element (checkbox replacement element) */
+        margin: auto;
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,208 @@
+/*
+ * table
+ */
+
+.in-c-table-wrapper {
+
+  overflow: scroll;
+
+}
+
+.in-c-table { 
+
+  @extend %table;
+
+  caption {
+
+    @extend %caption;
+
+  }
+
+  thead {
+
+    background-color: $in-navy;
+
+    td {
+
+      /* when <td> is used as a table header */
+
+      @extend %th;
+
+    }
+
+  }
+
+  tfoot {
+
+    // 
+
+  }
+
+  tbody {
+
+    // 
+
+    tr {
+
+      // 
+
+      &:nth-child(odd) {
+
+        background-color: white;
+
+      }
+
+      &:nth-child(even) {
+
+        background-color: white;
+
+      }
+
+    }
+
+    td {
+
+      // border-bottom: 1px solid #cdcecf; 
+      
+    }
+
+  }
+
+  tr {
+
+    //
+
+  }
+
+  th, 
+  &__th {
+
+    @extend %th;
+
+  }
+
+  td, 
+  &__td {
+
+    @extend %td;
+
+  }
+
+  &__link-list {
+
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+
+    li {
+
+      margin: 0 1rem 0 0;
+
+      &:last-child {
+
+        margin: 0; 
+
+      }
+
+    }
+
+  }
+
+  &--auto-width {
+
+    width: auto;
+    
+  }
+
+  &--borderless {
+
+    //
+
+    td {
+
+      padding-top: 0;
+      padding-left: 0;
+      border: 0; 
+
+      &:last-child {
+
+        padding-right: 0;
+
+      }
+
+    }
+
+    tr:last-child {
+
+      // 
+
+      td {
+
+        padding-bottom: 0;
+
+      }
+
+    }
+
+  }
+
+  &--comps {
+    
+    //
+
+    thead { 
+
+      // 
+
+      th:first-child {
+
+        width: 160px !important;
+
+      }
+
+    }
+
+    [class^="in-i-"], 
+    [class*=" in-i-"] {
+
+      font-size: 1rem;
+
+    }
+
+  }
+
+  &--alt, 
+  &--alt.in-c-table--scrollable {
+
+    // 
+
+    th {
+
+      background-color: white;
+      color: $in-navy;
+
+    }
+
+    th, 
+    td {
+
+      border-width: 0;
+
+      &:first-child {
+
+        padding-left: 0; 
+        
+      }
+
+      &:last-child {
+
+        padding-right: 0; 
+        
+      }
+
+    }
+
+  }
+
+}

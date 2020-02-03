@@ -1,0 +1,43 @@
+/*
+ * request form
+ */ 
+
+.in-c-request-form {
+
+  //
+
+  &__inner {
+
+    //
+
+  }
+
+  /* match height of <textarea> with highest column */
+
+  .in-l-grid__item {
+
+    //
+
+    &:last-child {
+
+      // 
+
+      .in-c-fieldset {
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .in-c-textarea {
+
+          flex: 1;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

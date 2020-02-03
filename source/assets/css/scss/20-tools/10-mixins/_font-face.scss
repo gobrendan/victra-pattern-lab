@@ -1,0 +1,32 @@
+//
+// @font-face rule
+// Usage: @include font-face(TransportNewLight, TransportNewLight);
+//
+// Help: https://css-tricks.com/snippets/css/using-font-face/
+//
+
+@mixin font-face($font-name, $font-file-name) {
+
+  @font-face {
+
+    font-family: '#{$font-name}';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/#{$font-file-name}.ttf')  format('truetype'),                    // Safari, Android, iOS
+         url('../fonts/#{$font-file-name}.woff') format('woff'),                        // Modern Browsers
+         url('../fonts/#{$font-file-name}.svg#svg#{$font-file-name}') format('svg');    // Legacy iOS
+     
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+
+    /* Support for Safari and Chrome. */
+    // text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    
+  }
+
+}
+
+// $in-font-family-primary :       'Sarabun-Regular', sans-serif;

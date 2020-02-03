@@ -1,0 +1,64 @@
+// 
+// table
+// 
+
+%table {
+
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0; 
+
+}
+
+%caption {
+
+  font: $in-font-primary-italic;
+  font-size: $in-font-size-zeta;
+
+}
+
+%th {
+
+  color: white;
+  @include custom-property(border-color, --in-black, $in-black);
+  // font-size: .9rem;
+  font-size: .75rem; /* 12px - should be in variable */
+  padding: .5rem 1rem;
+  font-weight: bold; 
+  text-align: left;
+
+  &.in-u-center {
+
+    text-align: center;
+
+  }
+
+}
+
+%td {
+
+  // @include custom-property(color, --in-navy, $in-navy);
+  @include custom-property(border-color, --in-gray, $in-gray);
+  // font-size: .8rem;
+  font-size: .75rem; /* 12px - should be in variable */
+  // vertical-align: top; 
+  padding: .5rem 1rem;
+  border-width: 0 0 1px;
+  border-style: solid;
+  text-align: left;
+
+  &.in-u-center {
+
+    text-align: center;
+    
+  }
+
+  &.in-u-right {
+
+    text-align: right;
+    
+  }
+
+}

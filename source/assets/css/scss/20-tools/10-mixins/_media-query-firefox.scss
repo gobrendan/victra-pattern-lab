@@ -1,0 +1,22 @@
+//
+// Target Firefox
+//
+// Usage:
+//
+// .box {
+//   line-height: 1.2;
+//   @include firefox-only-mq {
+//     line-height: 1;
+//   }
+// }
+//
+
+@mixin firefox-only-mq {
+
+  @-moz-document url-prefix() {
+
+    @content;
+
+  }
+
+}

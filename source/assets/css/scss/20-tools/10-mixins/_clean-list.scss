@@ -1,0 +1,11 @@
+//
+// clean list -- no padding, margins or bullets
+//
+
+@mixin clean-list {
+
+  list-style: none;
+  padding: 0;
+  margin: $margin;
+
+}

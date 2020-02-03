@@ -1,0 +1,16 @@
+/*
+ * multi date picker 
+ */ 
+
+.in-c-multi-date-picker {
+
+  display: flex;
+  justify-content: space-between;
+  
+  .in-c-date-picker {
+
+    flex: 0 0 calc(50% - .5rem);
+    
+  }
+
+}

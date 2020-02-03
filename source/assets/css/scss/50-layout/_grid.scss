@@ -1,0 +1,264 @@
+/*
+ * grid
+ */
+
+.in-l-grid {
+
+  /* the "display:grid" declaration is used in the "__inner" element when needed */
+
+  &__inner { 
+
+    width: 100%; 
+    // max-width: calc(#{$in-layout-max-width} + 2rem); /* this value should be in a variable */
+    // padding: 0 1rem; 
+    margin: auto; 
+
+  }
+
+  &__item {
+
+    width: 100%;
+
+  }
+
+  &--full {
+
+    //
+
+  }
+
+  &--halves {
+
+    //
+
+    .in-l-grid__inner {
+
+      //
+
+      .in-l-grid__item {
+
+        // 
+
+        &:first-child {
+
+          margin: 0 0 3rem;
+
+        }
+
+      }
+
+      // @include mq($in-large-breakpoint) {
+
+        display: grid;
+        grid-gap: 4rem;
+        grid-template-columns: 1fr 1fr;
+
+        .in-l-grid__item {
+
+          //
+
+          &:first-child {
+
+            margin: 0;
+  
+          }
+  
+        }
+
+      // }
+
+    }
+
+  }
+
+  &--2-1 {
+
+    //
+
+    .in-l-grid__inner {
+
+      .in-l-grid__item {
+
+        margin: 0 0 3rem;
+
+        &:last-child {
+
+          margin: 0;
+
+        }
+
+      }
+
+      // @include mq($in-large-breakpoint) {
+
+        display: grid;
+        grid-gap: 4rem;
+        grid-template-columns: 2fr 1fr;
+
+        .in-l-grid__item {
+
+          //
+
+          &:first-child {
+
+            margin: 0;
+  
+          }
+  
+        }
+        
+      // }
+
+    }
+
+  }
+
+  &--1-2 {
+
+    //
+
+    .in-l-grid__inner {
+
+      .in-l-grid__item {
+
+        margin: 0 0 3rem;
+
+        &:last-child {
+
+          margin: 0;
+
+        }
+
+      }
+
+      // @include mq($in-large-breakpoint) {
+
+        display: grid;
+        grid-gap: 4rem;
+        grid-template-columns: 1fr 2fr;
+
+        .in-l-grid__item {
+
+          //
+
+          &:first-child {
+
+            margin: 0;
+  
+          }
+  
+        }
+        
+      // }
+
+    }
+
+  }
+
+  &--9-10 {
+
+    //
+
+    .in-l-grid__inner {
+
+      .in-l-grid__item {
+
+        margin: 0 0 1rem;
+
+        &:last-child {
+
+          margin: 0;
+
+        }
+
+      }
+
+      // @include mq($in-large-breakpoint) {
+
+        display: grid;
+        grid-gap: 4rem;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+
+        .in-l-grid__item {
+
+          //
+
+          &:first-child {
+
+            margin: 0;
+  
+          }
+  
+        }
+        
+      // }
+
+    }
+
+  }
+
+  &--thirds {
+
+    //
+
+    .in-l-grid__inner {
+
+      //
+
+      .in-l-grid__item {
+
+        margin: 0 0 2rem;
+
+       &:last-child {
+
+          margin: 0;
+
+        }
+
+      }
+
+      // @include mq($in-large-breakpoint) {
+
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .in-l-grid__item {
+
+          margin: 0;
+  
+        }
+
+      // }
+
+    }
+
+  }
+
+  &--no-pad {
+
+    // 
+
+    .in-l-grid__inner {
+
+      padding: 0;
+      
+    }
+
+  }
+
+  &--demo { /* the "--demo" modifier class shouldn't be used in the SharePoint markup -- this should be added to "pattern-scaffolding.scss" */
+
+    //
+
+    .in-l-grid__item {
+
+      padding: 1rem;
+      border: 1px solid #ccc;
+
+    }
+
+  }
+
+}

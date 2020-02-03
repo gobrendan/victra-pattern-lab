@@ -1,0 +1,30 @@
+/*
+ * progress box 
+ */ 
+
+.in-c-progress-box {
+
+  display: flex;
+  align-items: center;
+
+  &__bar {
+
+    margin: 0 .5rem 0 0;
+
+    /* when used in tables, decrease width */
+
+    .in-c-table__td & {
+
+      width: 100px;
+
+    }
+
+  }
+
+  &__value {
+
+    // 
+
+  }
+
+}

@@ -1,0 +1,31 @@
+/*
+ * btn set
+ */ 
+
+.in-c-btn-set {
+
+  display: flex;
+
+  &__btn {
+
+    margin: 0 1rem 0 0;
+
+    &:last-child {
+
+      margin: 0; 
+
+    }
+
+  }
+
+  &--centered {
+
+    justify-content: center;
+  }
+
+  &--right {
+
+    justify-content: flex-end;
+  }
+
+}

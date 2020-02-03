@@ -1,0 +1,95 @@
+/*
+ * box -- wrapper for groups of components
+ */ 
+
+.in-l-box {
+
+  background-color: white;
+  padding: 0 1rem;
+  box-shadow: 1px 2px 5px rgba(000,000,000,.25); // value should be in variable
+  max-width: $in-layout-max-width;
+  margin: 0 auto 2rem; // value should be in variable -- used for "tabs--stubs" as well
+  flex: 0 0 auto;
+  width: 100%;
+
+  &__inner {
+
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+
+  &__heading {
+
+    font-size: 1.2rem; // value should be in variables
+    font-weight: bold;
+    color: $in-navy;
+    padding: 1rem 0 0;
+    margin: 0 0 1rem;
+    flex: 0 0 80%;
+
+  }
+
+  &__heading-count {
+
+    font-size: $in-font-size-delta;
+    font-weight: normal;
+    color: $in-medium-gray;
+
+  }
+
+  &__search-box {
+
+    flex: 0 0 20%;
+    align-self: center;
+    margin-left: auto;
+
+  }
+
+  &__btn {
+
+    border: 1px solid red;
+    
+  }
+
+  /* apply margins to some components */
+
+  .in-l-form {
+
+    margin: 0 0 1rem;
+    flex: 0 0 100%;
+
+  }
+
+  /* push some components to left/right edge */
+
+  .in-c-table-wrapper {
+
+    margin: 0 -1rem;
+    flex: auto;
+
+  }
+
+  .js-tabs {
+
+    margin: 0 -1rem;
+    flex: auto;
+
+  }
+
+  /* apply adjustments for forms */
+
+  .in-c-request-form {
+
+    width: 100%;
+    padding: 1rem 0;
+
+  }
+
+  &:last-child {
+
+    flex: 1; /* when these component are stacked and the viewport is tall, allow last element to fill up remaining space */
+
+  }
+
+}

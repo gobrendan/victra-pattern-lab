@@ -1,0 +1,51 @@
+/*
+ * inputs
+ */
+
+.in-c-input-text {
+
+  @extend %input; 
+
+  @at-root textarea#{&} {
+
+    display: block; /* removes unnecessary space below element */
+    min-height: 100px;
+    line-height: 1.4;
+    overflow: auto; /* without this, scrollbar placeholder is visible in IE 11- */
+    resize: vertical; 
+  
+  }
+
+  &[type=number]::-webkit-inner-spin-button,
+  &[type=number]::-webkit-outer-spin-button {
+
+    //
+
+  }
+
+  &::placeholder {
+
+    color: #666; // value should be variable 
+  
+  }
+
+  &:placeholder-shown {
+
+    //
+  
+  }
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button {
+
+    //
+
+  }
+
+  &--small {
+
+    width: 50px;
+
+  }
+
+}

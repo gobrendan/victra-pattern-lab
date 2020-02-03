@@ -1,0 +1,131 @@
+/*
+ * display
+ */
+
+.in-u-display-contents {
+
+  display: contents;
+
+}
+
+.in-u-display-inline {
+
+  display: inline;
+
+}
+
+/* show/hide based on viewport width */
+
+.in-u-display {
+
+  //
+
+  &--small {
+    
+    //
+  
+  }
+  
+  &--medium {
+    
+    display: none;
+
+    &.in-u-display-inline {
+
+      display: none;
+    
+    }
+    
+    @include mq($in-medium-breakpoint) {
+      
+      display: block;
+
+      &.in-u-display-inline {
+
+        display: inline;
+
+      }
+    
+    }
+
+  }
+        
+  &--large {
+
+    //
+
+  }
+
+  &--small-only {
+
+    //
+
+    @include mq($in-medium-breakpoint) {
+
+      display: none;
+
+      &.in-u-display-inline {
+
+        display: none;
+      
+      }
+
+    }
+  
+  }
+  
+  &--medium-only {
+    
+    //
+    
+    @include mq($in-large-breakpoint) {
+
+      display: none;
+
+      &.in-u-display-inline {
+
+        display: none;
+      
+      }
+
+    }
+
+  }
+        
+  &--large-only {
+
+    display: none;
+    
+    @include mq($in-large-breakpoint) {
+
+      display: block;
+
+      &.in-u-display-inline {
+
+        display: inline;
+
+      }
+
+    }
+
+  }
+
+  &--small-medium-only {
+    
+    //
+    
+    @include mq($in-large-breakpoint) {
+
+      display: none;
+
+      &.in-u-display-inline {
+
+        display: none;
+      
+      }
+
+    }
+
+  }
+
+}

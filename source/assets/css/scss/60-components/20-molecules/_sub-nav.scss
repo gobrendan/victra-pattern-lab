@@ -1,0 +1,70 @@
+/*
+ * sub nav
+ */ 
+
+.in-c-sub-nav {
+
+  //
+
+  &__inner {
+
+    margin: auto;
+    max-width: $in-layout-max-width;
+    
+  }
+
+  &__list {
+
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+
+  }
+  
+  &__item {
+
+    display: flex;
+    // margin: 0 1rem 0 0;
+
+    &:last-child {
+
+      // margin: 0; 
+
+    }
+
+  }
+
+  &__link {
+
+    font-size: 1rem; 
+    color: $in-navy;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    padding: 0 .5rem;
+
+    &:hover {
+
+     background-color: #ccc;
+
+    }
+
+    &--active {
+
+      font-weight: bold;
+      padding: 6px .5rem 0; /* top value takes border height into account, keeps text aligned with siblings */
+      border-bottom: 6px solid $in-navy;
+
+      &:hover {
+
+        //
+
+      }
+
+    }
+
+  }
+
+}

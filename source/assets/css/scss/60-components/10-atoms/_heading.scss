@@ -1,0 +1,53 @@
+/*
+ * headings
+ */
+
+.in-c-heading {
+
+  @extend %heading;
+
+  &--alpha {
+    
+    font-size: $in-font-size-alpha;
+    // text-transform: uppercase;
+    font-weight: 700; // font-weight values should be in variable -- they coincide with weights in Google Fonts URL 
+    color: $in-navy;
+    padding: 0;
+    margin: 0 0 2rem;
+
+  }
+
+  &--beta {
+
+    font-size: $in-font-size-beta; 
+    text-transform: uppercase;
+    font-weight: 700; // font-weight values should be in variable -- they coincide with weights in Google Fonts URL 
+    color: $in-navy;
+
+  }
+
+  &--gamma {
+
+    font-size: $in-font-size-gamma; 
+
+  }
+
+  &--delta {
+
+    font-size: $in-font-size-delta; 
+
+  }
+
+  &--epsilon {
+
+    font-size: $in-font-size-epsilon; 
+
+  }
+
+  &--zeta {
+
+    font-size: $in-font-size-zeta; 
+
+  }
+
+}

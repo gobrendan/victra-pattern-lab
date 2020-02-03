@@ -1,0 +1,22 @@
+//
+// media query
+//
+// .box {
+//   width: auto;
+//   @include mq(30em) {
+//     width: 50%;
+//   }
+// }
+//
+
+// Future dev: make it so "rem" or "px" values can be used
+
+@mixin mq($query) {
+
+  @media ('min-width:' + $query) {
+
+    @content;
+
+  }
+  
+}

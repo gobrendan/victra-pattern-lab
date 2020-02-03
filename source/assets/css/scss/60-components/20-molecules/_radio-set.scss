@@ -1,0 +1,21 @@
+/*
+ * radio set
+ */ 
+
+.in-c-radio-set {
+
+  // 
+
+  &__item {
+
+    margin: 0 0 .75rem; 
+
+    &:last-child {
+
+      margin: 0; 
+      
+    }
+
+  }
+
+}

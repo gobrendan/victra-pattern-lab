@@ -1,0 +1,40 @@
+// 
+// progress
+// 
+
+%progress {
+
+  /* reset default appearance */
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none; 
+
+  /* custom styling */
+
+  width: auto;
+  height: 1.5rem; 
+  display: block; /* display as "inline-block" by default */
+  position: relative;
+  background: $in-green; 
+
+  &::-webkit-progress-value {
+
+    background: $in-green; 
+
+  }
+
+  &:before {
+
+    content: attr(data-value) "%"; /* first pair parenthesis includes the "check" icon, second set of parenthesis is simply a space */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* needed to vertically center */
+    display: block;
+    color: $in-white;
+    right: .5rem;
+
+  }
+
+}

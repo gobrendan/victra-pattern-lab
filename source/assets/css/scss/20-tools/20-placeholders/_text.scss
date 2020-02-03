@@ -1,0 +1,51 @@
+// 
+// text 
+// 
+
+%a {
+
+  @include custom-property(color, --in-blue, $in-blue);
+  transition: $in-text-transition; 
+  text-decoration: none; 
+
+  &:hover {
+
+    text-decoration: underline;
+
+  }
+
+  &:focus {
+
+    //
+
+  }
+
+  &:active {
+
+    //
+
+  }
+
+  &:visited {
+
+    //
+
+  }
+
+}
+
+%paragraph {
+
+  margin: 0 0 .75em;
+
+}
+
+%blockquote {
+
+  @include custom-property(border-left-color, --in-medium-gray, $in-medium-gray);
+  border-left-style: solid; 
+  border-left-width: 2px;
+  margin: 1em 0 1em 2em;
+  padding: 0 0 0 1em; 
+
+}

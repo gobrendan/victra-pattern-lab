@@ -1,0 +1,80 @@
+/*
+ * form
+ */ 
+
+.in-l-form {
+
+  //
+
+  &__inner {
+
+    display: flex; 
+    align-items: center;    
+
+    /* flex-wrap and position declarations allow "__btn-set--top" elements to display properly */
+
+    flex-wrap: wrap;
+    position: relative;
+
+  }
+
+  &__heading {
+
+    font-weight: bold;
+    margin: 0 1rem 0 0;
+    color: $in-blue; 
+
+  }
+
+  &__item {
+
+    // flex: 0 0 160px;
+    margin: 0 1rem 0 0;
+
+    &:last-child {
+
+      margin: 0;
+
+    }
+
+  }
+
+  &__toggle-box {
+
+    margin-left: auto;
+
+  }
+
+  &__btn-set {
+
+    // 
+
+    &--top {
+
+      order: -1;
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 0 .75rem; /* magic number */
+
+      .in-l-box & {
+
+        /* use absolute positioning when elements is included in "box" layout */
+
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+
+      }
+
+    }
+
+  }
+
+  &--filter {
+
+    //
+    
+  }
+
+}

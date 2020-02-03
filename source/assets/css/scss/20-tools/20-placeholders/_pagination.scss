@@ -1,0 +1,77 @@
+// 
+// pagination
+// 
+
+%pagination {
+
+  // 
+
+}
+
+%pagination__list {
+
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+%pagination__item {
+
+  @include custom-property(background-color, --in-white, $in-white);
+
+}
+
+%pagination__link {
+
+  display: block; 
+  line-height: 34px; 
+  padding: 0 .5rem; 
+  border: 1px solid transparent;  /* improves horizonal alignment of text links and arrow links */
+
+  &:visited {
+
+    @include custom-property(color, --in-blue, $in-blue); /* override SharePoint CSS */
+    
+  }
+
+}
+
+%pagination__link--active {
+
+  @include custom-property(background-color, --in-light-gray, $in-light-gray);
+  color: $in-black; 
+  padding: 0 .75rem; 
+  border: 1px solid $in-medium-gray; 
+  text-decoration: none;
+
+  &:hover {
+
+    text-decoration: none;
+    
+  }
+
+}
+
+%pagination__link--inactive {
+
+  color: $in-black; 
+  cursor: default; 
+
+}
+
+%pagination-arrow {
+
+  text-align: center; 
+  text-decoration: none;
+  border: 1px solid $in-medium-gray; 
+
+  a, 
+  span {
+
+    border: 0;
+
+  }
+
+}

@@ -1,0 +1,24 @@
+/*
+ * toggle box 
+ */ 
+
+.in-c-toggle-box {
+
+  display: flex; 
+  align-items: center;
+
+  &__heading {
+
+    font-weight: bold;
+    margin: 0 1rem 0 0;
+    color: $in-blue; 
+
+  }
+
+  &__toggle {
+
+    // 
+    
+  }
+
+}

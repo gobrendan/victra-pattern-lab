@@ -1,0 +1,107 @@
+/*
+ * file picker 
+ * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
+ * https://tympanus.net/Tutorials/CustomFileInputs/
+ */ 
+
+.in-c-file-picker {
+
+  @extend .in-c-fieldset;
+  display: flex;
+  align-items: center;
+
+  &__fieldset {
+
+    width: 100%;
+    margin: 0;
+
+  }
+
+  &__label {
+
+    //
+
+  }
+
+  &__input {
+
+    // 
+
+  }
+  
+  &__input + label {
+
+    @extend .in-c-btn; /* make label look like button */
+    display: flex; 
+
+  }
+
+  &__input:focus + label,
+  &__input.has-focus + label {
+
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+
+  }
+
+  &__input + label {
+
+    border: 1px solid #dcdede; /* matches "text input" component */
+    background-color: white;
+    padding: 0; 
+    margin: 0;
+    
+  }
+
+  &__input:focus + label,
+  &__input.has-focus + label,
+  &__input + label:hover {
+
+    border-color: #999; /* matches "text input" component */
+    background-color: white;
+    color: white;
+    
+  }
+
+  &__input + label span,
+  &__input + label strong {
+
+    padding: .6rem 1.5rem; /* matches "btn" component */
+
+  }
+
+  &__input + label span {
+
+    width: 1px; /* width/pixel declaration necessary for flex to work properly */
+    min-height: 2em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+    color: black;
+    text-align: left;
+    padding: .6rem .5rem .6rem 1.5rem;
+    flex: 1;
+    
+  }
+
+  &__input + label strong {
+
+    height: 100%;
+    background-color: #24314b; /* matches "btn" component */
+    color: $in-white; /* matches "btn" component */
+    font-weight: normal;
+    
+  }
+
+  &__input:focus + label strong,
+  &__input.has-focus + label strong,
+  &__input + label:hover strong {
+
+    background-color: #205488; /* matches "btn" component */
+    color: $in-white; /* matches "btn" component */
+    border-radius: 0 3px 3px 0; /* match top/right and bottom/right border-radius with text inputs */
+    
+  }
+
+}

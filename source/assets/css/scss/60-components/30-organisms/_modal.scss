@@ -1,0 +1,135 @@
+/*
+ * modal
+ */ 
+
+.in-c-modal {
+
+  position: relative;
+  z-index: 99999; // value should be in variable
+
+  &__dialog {
+
+    @include translate(0, -500%);
+    // @include transition-transform(0.3s ease-out);
+    // transition: all .3s;
+    box-shadow: 1px 2px 5px rgba(000,000,000,.25); // value should be in variable
+    background: white;
+    padding: 1rem;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: fixed;
+    top: -100%;
+    z-index: 11;
+    right: 0;
+    left: 0;
+    z-index: 11;
+    max-width: 365px; /* default; magic number */
+
+    &--medium {
+
+      max-width: 600px;
+
+    }
+
+  }
+
+  &__section {
+
+    margin: 0 0 1rem;
+
+    &:last-child {
+
+      margin: 0; 
+
+    }
+
+  }
+
+  &__header {
+
+    margin: 0 0 1rem;
+    display: flex;
+
+  }
+
+  &__heading {
+
+    font-size: $in-font-size-alpha;
+    font-weight: 700; // font-weight values should be in variable -- they coincide with weights in Google Fonts URL 
+    color: $in-blue;
+    margin: 0; 
+    
+  }
+
+  &__close {
+
+    font-size: 1rem;
+    text-decoration: none;
+    color: $in-gray;
+    margin-left: auto;
+
+    &:hover {
+
+      text-decoration: none;
+
+    }
+
+  }
+
+  &__content {
+
+    //
+
+  }
+
+  &__overlay { 
+
+    display: none;
+    content: "";
+    background: rgba(000,000,000,.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+
+  }
+  
+  &:target {
+
+    //
+
+    .in-c-modal__dialog {
+
+      @include translate(0, 0);
+      top: 20%;
+
+    }
+
+    .in-c-modal__overlay {
+
+      display: block;
+
+    }
+
+  }
+
+  /* when demoing the "dialog" element on its own (displayed as regular component, not overlaying the the rest of the page) */
+
+  &--demo {
+
+    //
+
+    .in-c-modal__dialog {
+
+      position: relative;
+      transform: none;
+      top: auto;
+
+    }
+
+  }
+
+}

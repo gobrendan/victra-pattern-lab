@@ -1,0 +1,99 @@
+/*
+ * background color
+ */
+
+.in-u-bg-navy {
+
+  @include custom-property(background-color, --in-navy, $in-navy);
+
+}
+
+.in-u-bg-blue {
+
+  @include custom-property(background-color, --in-blue, $in-blue);
+
+}
+
+.in-u-bg-light-blue {
+
+  @include custom-property(background-color, --in-light-blue, $in-light-blue);
+
+}
+
+.in-u-bg-teal {
+
+  @include custom-property(background-color, --in-teal, $in-teal);
+
+}
+
+.in-u-bg-orange {
+
+  @include custom-property(background-color, --in-orange, $in-orange);
+
+}
+
+.in-u-bg-violet {
+
+  @include custom-property(background-color, --in-violet, $in-violet);
+
+}
+
+.in-u-bg-bright-orange {
+
+  @include custom-property(background-color, --in-bright-orange, $in-bright-orange);
+
+}
+
+.in-u-bg-red {
+
+  @include custom-property(background-color, --in-red, $in-red);
+
+}
+
+.in-u-bg-green {
+
+  @include custom-property(background-color, --in-green, $in-green);
+
+}
+
+.in-u-bg-dark-green {
+
+  @include custom-property(background-color, --in-dark-green, $in-dark-green);
+
+}
+
+.in-u-bg-black {
+
+  @include custom-property(background-color, --in-black, $in-black);
+
+}
+
+.in-u-bg-dark-gray {
+
+  @include custom-property(background-color, --in-dark-gray, $in-dark-gray);
+
+}
+
+.in-u-bg-medium-gray {
+
+  @include custom-property(background-color, --in-medium-gray, $in-medium-gray);
+
+}
+
+.in-u-bg-gray {
+
+  @include custom-property(background-color, --in-gray, $in-gray);
+
+}
+
+.in-u-bg-light-gray {
+
+  @include custom-property(background-color, --in-light-gray, $in-light-gray);
+
+}
+
+.in-u-bg-white {
+
+  @include custom-property(background-color, --in-white, $in-white);
+
+}

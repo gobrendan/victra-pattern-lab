@@ -1,0 +1,17 @@
+// 
+// heading
+// 
+
+%heading {
+
+  font-size: $in-font-size-default;
+  font-weight: normal;
+  line-height: 1.4; 
+  margin: 0 0 0.75em;
+  
+  /* override SharePoint CSS */
+
+  font-family: $in-font-family-primary; /* this should use "custom property" mixin -- font values should have "custom property" counterpart */
+  @include custom-property(color, --in-black, $in-black);
+  
+}

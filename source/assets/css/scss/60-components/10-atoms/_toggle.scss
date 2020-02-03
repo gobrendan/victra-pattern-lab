@@ -1,0 +1,138 @@
+/*
+ * toggle -- custom checkbox
+ */ 
+
+.in-c-toggle {
+
+  display: inline-flex;
+  align-items: center;
+  margin: 5px 0; /* margin allows room for "toggle," which is absolutely-positioned */
+
+  &__text {
+
+    font-size: 14px; 
+    margin-right: .25rem;
+    // min-width: 30px;
+    
+  }
+
+  &__toggle {
+
+    position: relative;
+    cursor: pointer;
+
+    &::before, 
+    &::after {
+  
+      content: '';
+      display: block;
+      transition: all 100ms;
+      background-color: white;
+  
+    }
+
+    &::before {
+
+      height: 16px;
+      width: 32px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+
+    }
+
+    &::after {
+
+      position: absolute;
+      top: 50%;
+      left: 3px;
+      transform: translate(0, -50%);
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      background-color: white;
+      border: 1px solid #bac9d1;
+      
+    }
+
+    & + .in-c-toggle__text {
+
+      margin-right: 0; 
+      margin-left: .25rem; 
+
+    }
+
+  }
+
+  &__checkbox {
+
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+    /* focus */
+
+    &:focus + .in-c-toggle__toggle {
+
+      // outline: 2px solid #5d9dd5;
+      // box-shadow: 0 0 8px #5e9ed6;
+
+    }
+
+    /* checked */
+
+    &:checked + .in-c-toggle__toggle::before {
+
+      background-color: $in-blue;
+
+    }
+
+    &:checked + .in-c-toggle__toggle::after {
+
+      left: auto;
+      right: 3px;
+
+    }
+
+    /* disabled */
+
+    &:disabled {
+
+      opacity: 0; /* override "input:disabled" opacity value used in separate Sass partial (atoms/_input.scss) */
+    
+      & + .in-c-toggle__toggle {
+
+        cursor: not-allowed;
+
+        &:before {
+
+          border: 1px solid rgba(186, 201, 209, .5);
+
+        }
+
+        &::after {
+
+          border: 1px solid rgba(186, 201, 209, .5);
+
+        }
+
+      }
+
+      &:checked {
+
+        & + .in-c-toggle__toggle {
+
+          &:before {
+
+            background-color: rgba(0, 185, 231, .2);
+
+          }
+
+        }
+
+      }
+
+    }
+  
+  }
+
+}

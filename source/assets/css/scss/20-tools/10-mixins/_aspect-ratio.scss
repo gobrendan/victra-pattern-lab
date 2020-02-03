@@ -1,0 +1,41 @@
+//
+// aspect ratio -- flexible media (images, videos)
+// https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+//
+// <div class="sixteen-nine">
+//   <div class="content">
+//     insert content here
+//     this will maintain a 16:9 aspect ratio
+//   </div>
+// </div>
+
+// .sixteen-nine {
+
+//   @include aspect-ratio(16, 9);
+
+// }
+
+@mixin aspect-ratio($width, $height) {
+
+  position: relative;
+
+  &:before {
+
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+
+  }
+
+  > .content {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+  }
+
+}

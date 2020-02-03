@@ -1,0 +1,56 @@
+// 
+// progress 
+// 
+
+.in-c-progress {
+
+  background-color: #ccc;
+  border: 0;
+  height: 18px;
+  border-radius: 0;
+
+  &::-webkit-progress-bar {
+    
+    background-color: #ccc; /* background */
+
+  }
+
+  &::-webkit-progress-value {
+    
+    background-color: $in-blue; /* meter/value */
+
+  }
+
+  &::-moz-progress-bar {
+    
+    background-color: $in-blue; /* meter/value */
+
+  }
+
+  &::-ms-fill {
+
+    background-color: $in-blue; /* meter/value */
+    border-color: $in-blue;; /* remove 1px black border in IE 10-11 and Edge */
+    
+  }
+
+  &__fallback {
+
+    background-color: #ccc;
+    width: 160px;
+    height: 18px;
+    position: relative;
+    display: block;
+
+  }
+
+  &__fallback-value {
+
+    height: 18px;
+    background-color: $in-blue; /* meter/value */
+    display: block;
+    text-indent: -9999px;
+
+  }
+
+}

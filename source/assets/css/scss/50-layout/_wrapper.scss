@@ -1,0 +1,36 @@
+/*
+ * wrapper
+ */ 
+
+.in-l-wrapper {
+
+  margin: 0 0 2rem; 
+
+  &__inner {
+
+    @include custom-property(max-width, --in-layout-max-width, $in-layout-max-width);
+    margin: auto;
+
+    &--full {
+
+      max-width: 100%; 
+      
+    }
+
+    &--padded {
+
+      max-width: calc(1260px + 2rem);
+      padding: 0 1rem;
+      margin: auto;
+
+    }
+
+  }
+
+  &--no-margin {
+
+    margin: 0; 
+    
+  }
+
+}

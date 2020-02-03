@@ -1,0 +1,40 @@
+//
+// grid 
+//
+// Usage:
+//
+// .in-l-grid {
+//   @include grid(false, 1rem, minmax(0, 1fr) 50%, auto);
+// }
+//
+
+@mixin grid($grid-declared, $gap, $columns, $rows) {
+
+  @if $grid-declared == true { 
+
+    // if 'grid' class exists in markup, no need to include "display: grid" declaration
+
+  }
+
+  @else {
+
+    display: grid;
+
+  }
+
+  @if $rows == 'auto' {
+
+    // if 'auto' value is used, no need to include 'grid-template-row: auto' declaration
+
+  }
+
+  @else {
+
+    grid-template-rows: $rows;
+
+  }
+
+  grid-gap: $gap;
+  grid-template-columns: $columns;
+
+}

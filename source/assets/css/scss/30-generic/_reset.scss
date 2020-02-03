@@ -1,0 +1,30 @@
+/*
+ * reset
+ */
+
+*[class^="in-"] {
+
+  box-sizing: border-box;
+
+}
+
+*[class^="in-"]:before, 
+*[class^="in-"]:after {
+
+  box-sizing: inherit;
+
+}
+
+header,
+footer,
+nav,
+main, 
+section,
+article,
+figure,
+picture,
+iframe {
+
+	// display: block; // This might not be necessary since we're supportingh IE 11+
+
+}

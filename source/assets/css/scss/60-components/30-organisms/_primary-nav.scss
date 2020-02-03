@@ -1,0 +1,100 @@
+/*
+ * primary nav
+ */ 
+
+.in-c-primary-nav {
+
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+  background-color: #ccc; /* helps display when component viewed alone -- overwritten when used in "site header" */
+
+  &__inner {
+
+    margin: auto;
+    max-width: $in-layout-max-width;
+
+  }
+
+  &__list {
+
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+
+  }
+
+  &__item {
+
+    display: flex;
+    position: relative; /* necessary for "__menu-box" positioning */
+    z-index: 1; /* keep menu above content below */
+
+    &.in-is-active {
+
+      background-color: #205488;
+
+      .in-c-primary-nav__link {
+        
+        //
+  
+      }
+  
+      .in-c-primary-nav__menu-box {
+  
+        display: block; 
+  
+      }
+  
+    }
+
+  }
+
+  &__link {
+
+    font-size: 1.2rem; 
+    color: $in-white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    padding: 1.25rem 1rem calc(1.25rem - 6px); /* takes border height into account, keeps text vertically-aligned in <a> */
+    border-bottom: 6px solid transparent; /* this is a transparent placeholder, keeps text aligned with siblings */
+
+    &:hover {
+
+      background-color: #205488;
+      color: $in-white;
+      text-decoration: none; 
+
+    }
+
+    &--active {
+
+      color: white;
+      border-bottom-color: white;
+
+      &:hover {
+
+        background-color: #205488;
+        color: white;
+
+      }
+
+    }
+
+  }
+
+  &__menu-box {
+
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 240px; // value should be in variable -- used for "user menu" component
+
+  }
+
+}

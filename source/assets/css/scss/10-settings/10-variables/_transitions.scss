@@ -1,0 +1,10 @@
+//
+// transitions
+//
+
+$in-default-transition :  all .15s ease-in-out;
+
+$in-text-transition :     $in-default-transition; 
+$in-btn-transition :      $in-default-transition; 
+$in-checkbox-transition : $in-default-transition; 
+$in-menu-transition :     opacity .15s ease-in-out; 

@@ -1,0 +1,58 @@
+/*
+ * menu box
+ */ 
+
+.in-c-menu-box {
+
+  background-color: white;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25); // value should be in variable
+
+  &__heading {
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #21314d; 
+    padding: .75rem 1rem;
+
+  }
+
+  &__list {
+
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+
+  }
+
+  &__item {
+
+    // 
+
+  }
+
+  &__link {
+
+    display: block;
+    font-size: 14px;
+    color: #21314d; 
+    padding: .75rem 1rem .75rem 1.25rem;
+    text-decoration: none;
+    border-left: 4px solid transparent; 
+
+    &:hover {
+
+      background-color: #d6e7f5;
+      border-left-color: #00558c;
+
+    }
+
+    &--active {
+
+      background-color: #d6e7f5;
+      border-left-color: #00558c;
+
+    }
+
+  }
+
+}

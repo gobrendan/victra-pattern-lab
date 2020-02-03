@@ -1,0 +1,81 @@
+{
+  "paths" : {
+    "source" : {
+      "root": "./source/",
+      "patterns" : "./source/_patterns/",
+      "data" : "./source/_data/",
+      "meta": "./source/_meta/",
+      "annotations" : "./source/_annotations/",
+      "styleguide" : "./node_modules/styleguidekit-assets-default/dist/",
+      "patternlabFiles" : "./node_modules/styleguidekit-mustache-default/views/",
+      "js" : "./source/assets/js",
+      "images" : "./source/assets//img",
+      "fonts" : "./source/assets//fonts",
+      "json" : "./source/assets//json",
+      "css" : "./source/assets//css/", 
+      "text" : "./source/assets//text/"
+    },
+    "public" : {
+      "root" : "./public/",
+      "patterns" : "./public/patterns/",
+      "data" : "./public/styleguide/data/",
+      "annotations" : "./public/annotations/",
+      "styleguide" : "./public/styleguide/",
+      "assets" : "./public/",  
+      "js" : "./public/assets//js",
+      "images" : "./public/assets//img",
+      "fonts" : "./public/assets//fonts",
+      "json" : "./public/assets//json",
+      "css" : "./public/assets//css", 
+      "text" : "./public/assets//text"
+    }, 
+    "prodReadyAssets" : {
+      "css" : "./prod-ready-assets/css/", 
+      "text" : "./prod-ready-assets/text/", 
+      "fonts" : "./prod-ready-assets/fonts/", 
+      "js" : "./prod-ready-assets/js/", 
+      "json" : "./prod-ready-assets/json/", 
+      "images" : "./prod-ready-assets/img/"
+    }
+  },
+  "styleGuideExcludes": [
+    "templates",
+    "pages"
+  ],
+  "defaultPattern": "viewall-atoms-colors",
+  "cleanPublic" : true,
+  "patternExtension": "mustache",
+  "ignored-extensions" : ["scss", "DS_Store", "less"],
+  "ignored-directories" : ["scss"],
+  "debug": false,
+  "ishControlsHide": {
+    "s": false,
+    "m": false,
+    "l": false,
+    "full": false,
+    "random": false,
+    "disco": false,
+    "hay": true,
+    "mqs": false,
+    "find": false,
+    "views-all": false,
+    "views-annotations": false,
+    "views-code": false,
+    "views-new": false,
+    "tools-all": false,
+    "tools-docs": false
+  },
+  "ishMinimum": "240",
+  "ishMaximum": "2600",
+  "patternStateCascade": ["inprogress", "inreview", "complete"],
+  "patternExportPatternPartials": [],
+  "patternExportDirectory": "./pattern_exports/",
+  "baseurl" : "",
+  "cacheBust": true,
+  "starterkitSubDir": "dist",
+  "outputFileSuffixes": {
+    "rendered": "",
+    "rawTemplate": "",
+    "markupOnly": ".markup-only"
+  }
+}

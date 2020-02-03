@@ -1,0 +1,22 @@
+//
+// Target Edge
+//
+// Usage:
+//
+// .box {
+//   line-height: 1.2;
+//   @include ms-edge-only {
+//     line-height: 1;
+//   }
+// }
+//
+
+@mixin ms-edge-only {
+
+  @supports (-ms-ime-align: auto) {
+
+    @content;
+
+  }
+
+}

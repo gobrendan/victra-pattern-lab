@@ -1,0 +1,77 @@
+// @font-face {
+//   font-family: 'in-icon-set';
+//   src:
+//     url('fonts/in-icon-set.ttf?x7kf9d') format('truetype'),
+//     url('fonts/in-icon-set.woff?x7kf9d') format('woff'),
+//     url('fonts/in-icon-set.svg?x7kf9d#in-icon-set') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: block;
+// }
+
+[class^="in-i-"], [class*=" in-i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'in-icon-set' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.in-i-bars:before {
+  content: "\e907";
+}
+.in-i-search:before {
+  content: "\e60b";
+}
+.in-i-times:before {
+  content: "\e908";
+}
+.in-i-times-circle:before {
+  content: "\e904";
+}
+.in-i-check:before {
+  content: "\e900";
+}
+.in-i-check-circle:before {
+  content: "\e90d";
+}
+.in-i-paperclip:before {
+  content: "\e901";
+}
+.in-i-comment-alt:before {
+  content: "\e902";
+}
+.in-i-info-circle:before {
+  content: "\e903";
+}
+.in-i-flag:before {
+  content: "\e905";
+}
+.in-i-edit:before {
+  content: "\e906";
+}
+.in-i-edit-solid:before {
+  content: "\e909";
+}
+.in-i-trash-alt:before {
+  content: "\e90a";
+}
+.in-i-calendar:before {
+  content: "\e90b";
+}
+.in-i-filter:before {
+  content: "\e90c";
+}
+.in-i-exclamation-triangle:before {
+  content: "\e90e";
+}
+.in-i-chevron-down:before {
+  content: "\e90f";
+}

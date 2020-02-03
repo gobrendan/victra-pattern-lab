@@ -1,0 +1,13 @@
+/*
+ * page
+ */ 
+
+.in-l-page {
+
+  @include custom-property(background-color, --in-light-gray, $in-light-gray);
+
+  /* override SharePoint CSS */
+
+  overflow-y: auto; /* allow body to scroll (SharePoint sets "overflow" to "hidden" */
+
+}

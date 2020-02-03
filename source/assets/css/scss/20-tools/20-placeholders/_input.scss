@@ -1,0 +1,154 @@
+// 
+// input 
+// 
+
+%input {
+
+  @include custom-property(color, --in-black, $in-black); /* override SharePoint CSS */
+  border-color: #dcdede;
+  @include custom-property(background-color, --in-white, $in-white);
+  border-style: solid;
+  border-width: 1px; /* this value should be in variable -- same number used for <select>, checkbox and radio */
+  font: $in-font-primary;
+  font-size: $in-font-size-default; 
+  width: 100%;
+  padding: .6rem .75rem;
+  outline: none;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  appearance: none; 
+
+  &[type=file] {
+
+    width: 100%; 
+  
+  }
+
+  /* hide native "up and down" buttons for "number" input */
+
+  &[type=number]::-webkit-inner-spin-button,
+  &[type=number]::-webkit-outer-spin-button {
+
+    -webkit-appearance: none;
+
+  }
+
+  &[disabled] {
+
+    background-color: #ccc;
+    cursor: not-allowed;
+    resize: none; 
+
+    &:hover {
+
+      border-color: #dcdede;
+
+    }
+
+  }
+
+  &::placeholder {
+
+    //
+  
+  }
+
+  &:placeholder-shown {
+
+    //
+  
+  }
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button {
+
+    // display: none;
+
+  }
+
+  &:hover {
+
+    border-color: #999;
+
+  }
+
+  &:focus {
+
+    @include custom-property(border-color, --in-blue, $in-blue);
+
+  }
+
+  /* placeholder selectors must be separate -- otherwise, they don't work */
+
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+
+    //
+
+  }
+
+  &::-moz-placeholder { /* Firefox 19+ */
+
+    //
+
+  }
+
+  &:-ms-input-placeholder { /* IE 10+ */
+
+    //
+
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+
+    //
+
+  }
+
+  /* override Webkit's autocomplete styling */
+
+  // &:-webkit-autofill,
+  // &:-webkit-autofill:hover, 
+  // &:-webkit-autofill:focus
+  // &:-webkit-autofill,
+  // &:-webkit-autofill:hover
+  // &:-webkit-autofill:focus,
+  // &:-webkit-autofill,
+  // &:-webkit-autofill:hover,
+  // &:-webkit-autofill:focus {
+
+  //   border: 1px solid green;
+  //   -webkit-text-fill-color: green;
+  //   -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  //   transition: background-color 5000s ease-in-out 0s;
+
+  // }
+
+  /* remove IE's "clear" button */
+
+  &::-ms-clear {
+
+    display: none; 
+
+  }
+
+  /* target IE 10 and 11 */
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  
+    /* in IE 11, without setting the line-height, text seems to be closer to the bottom edge of the text input */
+
+    line-height: 1;
+
+  }
+
+  /* target firefox */
+
+  ::-moz-placeholder {  
+
+    /* firefox decreases placeholder opacity by default, so reset back to 1 */
+
+    opacity: 1;
+
+  } 
+
+}
